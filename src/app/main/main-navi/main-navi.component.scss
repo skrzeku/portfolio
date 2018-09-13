@@ -1,0 +1,18 @@
+.navbar-nav {
+  display: inline-block;
+}
+.navbar-nav>li {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.fixed-top {
+  margin-left: 180px;
+}
+.navbar {
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}
+.nav-link {
+font-size: large;
+}

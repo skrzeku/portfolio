@@ -1,0 +1,42 @@
+.fixed-left {
+  width: 180px;
+  position: fixed;
+  border-radius: 0;
+  height: 100%;
+}
+
+.fixed-left .navbar-nav > li {
+  margin-top: 10px;
+  width: 139px;
+}
+
+.navbar-nav > li {
+  padding: 10px 3px 10px 6px;
+}
+.nav-link {
+  cursor: pointer;
+  font-size: large;
+  opacity: 1;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+.fas {
+  font-size: large;
+}
+
+.active {
+  border-left: cornflowerblue solid 4px;
+  box-shadow: 10px 10px 5px lightgray;
+}
+.rounded-circle {
+  background-color: lightgray;
+  border-radius: 50%;
+  min-height: 150px;
+  min-width: 150px;
+  text-align: center;
+}
+.navbar-nav li {
+  outline: 0;
+}
+
