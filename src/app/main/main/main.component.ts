@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, Inject, OnInit} from '@angular/core';
 import * as $ from 'jquery';
 
 @Component({
@@ -12,6 +12,17 @@ export class MainComponent implements OnInit {
 
   ngOnInit() {
   }
+  scrollValue = 0;
+  clickedValue: string;
+  @HostListener('document:mousewheel', ['$event'])
+  onDocumentMousewheelEvent(event) {
+    this.scrollValue = this.scrollValue + 1;
+    console.log(this.scrollValue);
+    console.log('Y:', pageYOffset);
+    console.log('X:', pageXOffset);
+
+  }
+
 
 
 }

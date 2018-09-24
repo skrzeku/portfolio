@@ -1,16 +1,16 @@
-<nav class="navbar fixed-top navbar-dark bg-dark">
-  <ul class="nav navbar-nav ml-auto mr-auto">
+<nav class="navbar mynav" *ngIf="shownavbar">
+  <ul class="nav navbar-nav">
     <li>
-      <a class="nav-link" (click)="scrollTOElement('#fat',-80,600)">@fat</a>
+      <a class="nav-link" (click)="scrollTOElement('#fat',-80,600)">@About Me</a>
     </li>
     <li>
-      <a class="nav-link" (click)="scrollTOElement('#mdo',-60,600)">@mdo</a>
+      <a class="nav-link" (click)="scrollTOElement('#mdo',-60,600)">@What i do</a>
     </li>
     <li>
-      <a class="nav-link" (click)="scrollTOElement('#one',-60,600)">@one</a>
+      <a class="nav-link" (click)="scrollTOElement('#one',-60,600)">@Skills</a>
     </li>
     <li>
-      <a class="nav-link" (click)="scrollTOElement('#two',-60,600)">@two</a>
+      <a class="nav-link" (click)="scrollTOElement('#two',-60,600)">@Ssj</a>
     </li>
   </ul>
 </nav>

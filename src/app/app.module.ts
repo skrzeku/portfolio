@@ -7,6 +7,7 @@ import {MainModule} from './main/main.module';
 import {AppRoutingModule} from './app-routing.module';
 import {ContactModule} from './contact/contact.module';
 import {ProjectsModule} from './projects/projects.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {ProjectsModule} from './projects/projects.module';
     MainModule,
     AppRoutingModule,
     ContactModule,
-    ProjectsModule
+    ProjectsModule,
+    BrowserAnimationsModule
 
   ],
   providers: [],

@@ -1,18 +1,35 @@
-.navbar-nav {
-  display: inline-block;
+/*
+.nav > li {
+  float: left;
+  text-align: center;
+  transform: rotate(90deg);
+  transform-origin: left top 0;
+  margin-left: 50px;
+  padding: 10px;
+  margin-top: 60px;
+  opacity: 0.9;
+  color: #FFF;
+  text-transform: uppercase;
 }
-.navbar-nav>li {
-  display: inline-block;
-  margin-left: 30px;
-}
+*/
 
-.fixed-top {
-  margin-left: 180px;
-}
 .navbar {
-  filter: alpha(opacity=50);
-  opacity: 0.5;
+  position: fixed;
+  padding: 2%;
+  top: 0;
+  height: 100%;
+}
+.mynav {
+  border-left: black;
 }
 .nav-link {
-font-size: large;
+  width: 14px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-left: -20px;
+  word-wrap: break-word;
+  outline:1px dotted red;
+  letter-spacing:2pt;
+  padding:20px;
+  writing-mode: tb-rl;
 }

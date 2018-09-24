@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import * as $ from 'jquery';
 
 @Component({
@@ -12,6 +12,9 @@ export class MainNaviComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  shownavbar: boolean = false;
+
   scrollTOElement = (element, offsetParam?, speedParam?) => {
     const toElement = $(element);
     const focusElement = $(element);
@@ -22,6 +25,20 @@ export class MainNaviComponent implements OnInit {
     }, speed);
     if (focusElement) {
       $(focusElement).focus();
+    }
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    //const componentPosition = this.el.nativeElement.offsetTop
+    const scrollPosition = window.pageYOffset;
+
+    if (scrollPosition <= 799) {
+      this.shownavbar = false;
+      console.log('should be hidden');
+    } else {
+      this.shownavbar = true;
+      console.log('should be shown');
     }
   }
 

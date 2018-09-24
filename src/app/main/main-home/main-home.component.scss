@@ -1,0 +1,85 @@
+.mybackground {
+
+  background-image: url("../../../assets/images/4.jpg");
+  background-repeat: no-repeat;
+
+  height: 800px;
+  padding-top: 600px;
+}
+.fas {
+  font-size: 3rem;
+  color: white;
+  position: absolute;
+  left: 43%;
+  transition: top ease 0.5s;
+  &:hover {
+    top: 615px;
+  }
+}
+.myrelative {
+  position: absolute;
+  left: 37%;
+  color: white;
+}
+
+
+
+
+.object{
+  height: 800px;
+  width: 100%;
+  background-size: cover;
+  padding-top: 600px;
+  background-attachment: fixed;
+  margin: 0;
+  display: table;
+}
+
+h1{
+  margin: 0;
+  color: #eee;
+  font-family: sans-serif;
+  font-size: 50px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+.content{
+  position: relative;
+  min-height: 100%;
+  padding: 4em 0;
+  line-height: 1.6;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  font-size: 24px;
+  background-color: tomato;
+}
+.content p{
+  margin: 40px ;
+}
+
+.one{
+  background-image: url("../../../assets/images/4.jpg");
+}
+.two{
+  background-image: url('http://gamerssphere.com/wp-content/uploads/2015/05/The-Flash.jpg');
+}
+.three{
+  background-image: url('http://www.blastr.com/sites/blastr/files/1400308574-iron-man.jpg');
+}
+.four{
+  background-image: url('http://www.hdwallpapers.in/download/joker_the_dark_knight-1920x1080.jpg');
+}
+
+footer{
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  color: white;
+}
+.copyright {
+  text-align: center;
+  padding: 15px;
+  display: block;
+}
+
