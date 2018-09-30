@@ -1,4 +1,11 @@
 <app-header>
-  <div header>Siemano</div>
+  <div header>Projects</div>
 </app-header>
 <app-filter></app-filter>
+<div class="container p-5">
+  <div class="row">
+  <div class="col-sm-3 smallprojects" *ngFor="let projects of projects | myfilter: filters">
+    <span>{{projects.shortdescription}}</span>
+  </div>
+  </div>
+</div>

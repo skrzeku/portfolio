@@ -8,10 +8,12 @@ import {AppRoutingModule} from './app-routing.module';
 import {ContactModule} from './contact/contact.module';
 import {ProjectsModule} from './projects/projects.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {SharedModuleModule} from './shared-module/shared-module.module';
+import {MyfilterPipe} from './shared-module/pipes/myfilter.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -20,10 +22,11 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     AppRoutingModule,
     ContactModule,
     ProjectsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SharedModuleModule
 
   ],
-  providers: [],
+  providers: [MyfilterPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

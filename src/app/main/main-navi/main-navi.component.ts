@@ -1,5 +1,6 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild} from '@angular/core';
 import * as $ from 'jquery';
+import {MainService} from '../../shared-module/services/main.service';
 
 @Component({
   selector: 'app-main-navi',
@@ -8,37 +9,39 @@ import * as $ from 'jquery';
 })
 export class MainNaviComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild ('mainnavbar') mainnavbar: ElementRef;
+  myelement: any;
+  myposition: number;
+
+  constructor(private render: Renderer2,
+              private mainservice: MainService) { }
 
   ngOnInit() {
+    this.myfunc();
   }
 
-  shownavbar: boolean = false;
-
-  scrollTOElement = (element, offsetParam?, speedParam?) => {
-    const toElement = $(element);
-    const focusElement = $(element);
-    const offset = offsetParam * 1 || 20;
-    const speed = speedParam * 1 || 50;
-    $('html, body').animate({
-      scrollTop: toElement.offset().top + offset
-    }, speed);
-    if (focusElement) {
-      $(focusElement).focus();
-    }
+  myvoid(param, param2, param3): void {
+    this.mainservice.ScrolltoElement(param, param2, param3);
   }
+
+
+  fixednavbar: boolean = false;
+
+  myfunc (): void {
+    this.myposition = document.querySelector('#fat').getBoundingClientRect().top;
+    console.log(this.myposition);
+  }
+
 
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
-    //const componentPosition = this.el.nativeElement.offsetTop
     const scrollPosition = window.pageYOffset;
 
-    if (scrollPosition <= 799) {
-      this.shownavbar = false;
-      console.log('should be hidden');
+    if (scrollPosition <= (this.myposition - 50)) {
+      this.fixednavbar = false;
     } else {
-      this.shownavbar = true;
-      console.log('should be shown');
+      this.fixednavbar = true;
+
     }
   }
 

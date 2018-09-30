@@ -1,10 +1,4 @@
-.navbar-nav {
-  display: inline-block;
-}
-.navbar-nav>li {
-  display: inline-block;
-  margin-left: 30px;
-}
+
 .nav {
   font-size: large;
   opacity: 2;
@@ -12,15 +6,13 @@
 body {
   opacity: 1;
 }
-.navbar {
-  filter: alpha(opacity=50);
-  opacity: 0.5;
-}
 .mymargin {
   margin-top: 200px;
 }
-
-.mybackground:before {
+.myind {
+  z-index: 10;
+}
+.mybackgrsound:before {
   content: "";
   top: 0;
   left: 0;
@@ -36,3 +28,17 @@ body {
 
   /* IE6-9 */
 }
+
+h4 {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 140px;
+  border-bottom: cornflowerblue solid 5px;
+}
+.section {
+  height: 100vh;
+  padding-top: 50px;
+}
+
+

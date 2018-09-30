@@ -2,6 +2,7 @@
 .myfixed {
   position: fixed;
   left: 0;
+  z-index: 10;
   top: 0;
   height: 100%;
   width: 15%;
@@ -23,6 +24,7 @@ body {
     opacity: 0.6;
   }
 }
+
 .myul > li {
   display: inline-block;
   font-size: 1.3rem;
@@ -39,6 +41,7 @@ width: 70%;
 
 
 
+
 // Extra small devices (portrait phones, less than 576px)
 // No media query since this is the default in Bootstrap
 @media (max-width: 575px) {
@@ -50,9 +53,7 @@ width: 70%;
 body {
   font-size: 1.1rem;
 }
-  .rightnavi {
-    display: none;
-  }
+
 
 }
 
@@ -64,6 +65,7 @@ body {
     width: 100%;
     height: auto;
   }
+
   .router {
     margin-left: 0;
   }
@@ -73,9 +75,6 @@ body {
   .img-fluid {
     display: none;
   }
-  .nav-link {
-    width: 40%;
-  }
   .navbar-brand {
     display: inline;
     font-size: 1.2rem;
@@ -84,9 +83,6 @@ body {
     display: none;
   }
   .rwd-break { display: none; }
-
-
-
 
 }
 

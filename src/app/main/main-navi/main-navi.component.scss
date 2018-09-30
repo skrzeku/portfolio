@@ -1,35 +1,64 @@
-/*
-.nav > li {
-  float: left;
-  text-align: center;
-  transform: rotate(90deg);
-  transform-origin: left top 0;
-  margin-left: 50px;
-  padding: 10px;
-  margin-top: 60px;
-  opacity: 0.9;
-  color: #FFF;
-  text-transform: uppercase;
+#mainnavbar {
+  height: 6vh;
+  z-index: 30;
+  color: white;
+  margin-top: -6vh;
+  width: 100%;
 }
-*/
-
-.navbar {
+.alists > a {
+  margin-left: 15px;
+}
+.main-navbar-fixed {
   position: fixed;
-  padding: 2%;
-  top: 0;
-  height: 100%;
+  top: 6vh;
+  background-color: #eceff1;
+  color: black !important;
 }
-.mynav {
-  border-left: black;
+.mycontainer {
+  border: darkgray solid 3px;
+  background: lightblue;
 }
-.nav-link {
-  width: 14px;
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-left: -20px;
-  word-wrap: break-word;
-  outline:1px dotted red;
-  letter-spacing:2pt;
-  padding:20px;
-  writing-mode: tb-rl;
+.active {
+  height: 6vh;
+  color: white !important;
+  background-color: cornflowerblue;
+}
+.alists {
+  width: 100%;
+}
+
+
+
+
+
+                                 // Extra small devices (portrait phones, less than 576px)
+                                 // No media query since this is the default in Bootstrap
+@media (max-width: 575px) {
+
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 767px) {
+  #mainnavbar {
+    display: none;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 991px) {
+  .alists > a {
+    font-size: 1.2rem;
+  }
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 1199px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
 }

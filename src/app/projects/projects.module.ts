@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ProjectsComponent } from './projects/projects.component';
 import { FilterComponent } from './filter/filter.component';
 import {SharedModuleModule} from '../shared-module/shared-module.module';
+import {MyfilterPipe} from '../shared-module/pipes/myfilter.pipe';
 
 @NgModule({
   imports: [
@@ -10,6 +11,7 @@ import {SharedModuleModule} from '../shared-module/shared-module.module';
     SharedModuleModule
   ],
   declarations: [ProjectsComponent, FilterComponent],
-  exports: [ProjectsComponent]
+  exports: [ProjectsComponent],
+  providers: [MyfilterPipe]
 })
 export class ProjectsModule { }

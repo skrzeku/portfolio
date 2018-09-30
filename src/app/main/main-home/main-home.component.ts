@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
+import {MainService} from '../../shared-module/services/main.service';
 
 @Component({
   selector: 'app-main-home',
@@ -8,18 +9,15 @@ import * as $ from 'jquery';
 })
 export class MainHomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private mainservice: MainService) { }
 
   ngOnInit() {
   }
 
-  scrolllby() : void {
-    window.scrollBy(0, 230);
-    console.log(window.pageYOffset);
-
-  }
-  scrollTo(): void {
-    $('html, body').animate({scrollTop: 800}, '50');
-
+  scrollTo(par1, par2, par3): void {
+    this.mainservice.ScrolltoElement(par1, par2, par3);
+    //$('html, body').animate({scrollTop: 700}, '50');
   }
 }
+
+
