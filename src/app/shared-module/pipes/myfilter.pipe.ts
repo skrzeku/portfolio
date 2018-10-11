@@ -19,7 +19,7 @@ function matchAll(item: any, filters: Array<Filter>): boolean {
   let valid = true;
   for (const filter of filters) {
     if (!hasKey(item, filter.name)
-      || ((item[filter.name] !== filter.value))
+      || ((item[filter.name] !== filter.value) && (item[filter.name] !== filter.value2))
      )   {
       valid = false;
       break;

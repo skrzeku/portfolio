@@ -8,27 +8,18 @@
 .alists > a {
   margin-left: 15px;
 }
+                        //Added by ngClass
 .main-navbar-fixed {
   position: fixed;
   top: 6vh;
   background-color: #eceff1;
   color: black !important;
 }
-.mycontainer {
-  border: darkgray solid 3px;
-  background: lightblue;
-}
 .active {
   height: 6vh;
   color: white !important;
   background-color: cornflowerblue;
 }
-.alists {
-  width: 100%;
-}
-
-
-
 
 
                                  // Extra small devices (portrait phones, less than 576px)

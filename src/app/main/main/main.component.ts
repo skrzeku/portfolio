@@ -14,12 +14,6 @@ export class MainComponent implements OnInit {
   ngOnInit() {
 
   }
-  scrollValue = 0;
-  clickedValue: string;
-  @HostListener('document:mousewheel', ['$event'])
-  onDocumentMousewheelEvent(event) {
-    this.scrollValue = this.scrollValue + 1;
-  }
 
 
 

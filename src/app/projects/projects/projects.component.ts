@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {Project} from '../models/Projects';
 import {Filter} from '../models/Filter';
+import {FilterComponent} from '../filter/filter.component';
 
 @Component({
   selector: 'app-projects',
@@ -8,6 +9,7 @@ import {Filter} from '../models/Filter';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
+  @ViewChild('filterchild') filterchild: FilterComponent;
 
 
 
@@ -15,13 +17,13 @@ export class ProjectsComponent implements OnInit {
   projects: Project[] = [
     {
       img_url: 'myurl',
-      language: 'jave',
+      language: 'Java',
       shortdescription: 'java game',
       description: 'it was one of my first project and my first adventure with java'
     },
     {
       img_url: 'myurl',
-      language: 'JavaScript',
+      language: 'HTML',
       shortdescription: 'Furniture app',
       description: 'it was one of my first project and my first adventure with java'
     },
@@ -40,20 +42,20 @@ export class ProjectsComponent implements OnInit {
     {
       img_url: 'myurl',
       language: 'Angular',
+      //language: ['Angular', 'TypeScript', 'HTML', 'CSS'],
       shortdescription: 'Current WebSite',
       description: 'it was one of my first project and my first adventure with java'
     }
   ];
-  filters: Filter[] = [
-    {
-      name: 'language',
-      value: 'HTML'
-    }
-  ];
+
+  filters: Filter[] = [];
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+
+    this.filters = this.filterchild.ArrayofFilters;
+  }
 
 
 
