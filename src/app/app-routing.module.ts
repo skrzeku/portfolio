@@ -17,7 +17,8 @@ const APP_ROUTES : Routes = [
 
 ];
 @NgModule({
-  imports: [RouterModule.forRoot(APP_ROUTES, {
+                    //scrollPositionRestoration is using for Angular 6.1+ means: Scroll to top after rooting!
+  imports: [RouterModule.forRoot(APP_ROUTES, {scrollPositionRestoration: 'enabled'
   })],
   declarations: [],
   exports: [RouterModule, SharedModuleModule]

@@ -1,3 +1,4 @@
+@import "../../../assets/styles/variables";
 .container {
   position: relative;
   z-index: 1;
@@ -8,12 +9,16 @@
   opacity: 1;
   background-color: yellow;
   position: relative;
-  border: solid red 1px;
+  cursor: pointer;
   &:hover {
-    opacity: 0.7;
+    opacity: 0.8;
+    border: solid cornflowerblue 3px;
   }
   &:hover .myposition {
     height: 40px;
+  }
+  &:hover .inside{
+    opacity: 1;
   }
 }
 
@@ -30,6 +35,14 @@
 .inside {
   text-align: center;
   color: white;
+  opacity: 0.0;
+  -webkit-transition: opacity 900ms;
+  transition: opacity 900ms;
+}
+h2 {
+  border-top: darkgray inset 2px;
+  border-bottom: darkgray outset 2px;
+  text-align: center;
 }
 
 
