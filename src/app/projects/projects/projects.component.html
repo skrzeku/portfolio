@@ -1,9 +1,9 @@
-<h2>Projects</h2>
+<h2 class="text-center">Projects</h2>
 <app-filter #filterchild></app-filter>
 <div class="container p-5">
   <div class="row">
-  <div class="col-sm-3 smallprojects" *ngFor="let projects of projects | myfilter: filters">
-    <div class="myposition"><p class="inside">{{projects.shortdescription}}</p></div>
+  <div class="col-sm-3 smallprojects position-relative" *ngFor="let projects of projects | myfilter: filters">
+    <div class="myposition position-absolute w-100"><p class="inside text-white text-center">{{projects.shortdescription}}</p></div>
   </div>
     <div class="col-sm-12">
       <p class="p-5">This tab will be edited with the appearance of new projects made by me.

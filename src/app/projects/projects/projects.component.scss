@@ -1,14 +1,9 @@
 @import "../../../assets/styles/variables";
-.container {
-  position: relative;
-  z-index: 1;
-}
 .smallprojects {
   height: 30vh;
   margin: 10px;
   opacity: 1;
   background-color: yellow;
-  position: relative;
   cursor: pointer;
   &:hover {
     opacity: 0.8;
@@ -21,20 +16,15 @@
     opacity: 1;
   }
 }
-
 .myposition{
-  position: absolute;
   left: 0;
   bottom: 0;
   height: 0;
   background-color: gray;
-  width: 100%;
   -webkit-transition: all 900ms;
   transition: all 900ms;
 }
 .inside {
-  text-align: center;
-  color: white;
   opacity: 0.0;
   -webkit-transition: opacity 900ms;
   transition: opacity 900ms;
@@ -42,7 +32,6 @@
 h2 {
   border-top: darkgray inset 2px;
   border-bottom: darkgray outset 2px;
-  text-align: center;
 }
 
 
