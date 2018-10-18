@@ -1,13 +1,11 @@
 @import "../../../assets/styles/variables";
 .smallprojects {
   height: 30vh;
-  margin: 10px;
   opacity: 1;
   background-color: yellow;
-  cursor: pointer;
   &:hover {
     opacity: 0.8;
-    border: solid cornflowerblue 3px;
+    border: solid $mainColor 3px;
   }
   &:hover .myposition {
     height: 40px;
@@ -29,11 +27,6 @@
   -webkit-transition: opacity 900ms;
   transition: opacity 900ms;
 }
-h2 {
-  border-top: darkgray inset 2px;
-  border-bottom: darkgray outset 2px;
-}
-
 
 /*
 

@@ -1,14 +1,21 @@
 import { Injectable } from '@angular/core';
 import * as $ from 'jquery';
+import {BehaviorSubject, Observable} from 'rxjs';
+import {Project} from '../../projects/models/Projects';
+import {Http} from '@angular/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MainService {
+  oneproject$ = new BehaviorSubject<any>(null);
+  private MyApiUrl = 'http://localhost:4200/projects';
+  emitLikeOutput = new BehaviorSubject<any>(false);
 
-  constructor() { }
+  constructor() {
+  }
 
-myconditional: boolean = false;
+  myconditional: boolean = false;
 
   ScrolltoElement(element, offsetParam?, speedParam?): void {
     const toElement = $(element);
@@ -22,6 +29,16 @@ myconditional: boolean = false;
       $(focusElement).focus();
     }
   }
+
+  ShareProject(project): void {
+    this.oneproject$.next(project);
+    console.log(project);
+  }
+  ShareFromTemplate(value: boolean): void {
+    this.emitLikeOutput.next(value);
+    console.log(value);
+  }
+
 }
 
 

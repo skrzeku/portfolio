@@ -10,6 +10,7 @@ import {ProjectsModule} from './projects/projects.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {SharedModuleModule} from './shared-module/shared-module.module';
 import {MyfilterPipe} from './shared-module/pipes/myfilter.pipe';
+import {ProjectsRoutingModule} from './projects/projects-routing.module';
 
 @NgModule({
   declarations: [
@@ -21,10 +22,10 @@ import {MyfilterPipe} from './shared-module/pipes/myfilter.pipe';
     MainModule,
     AppRoutingModule,
     ContactModule,
-    ProjectsModule,
     BrowserAnimationsModule,
-    SharedModuleModule
+    SharedModuleModule,
 
+    //lazy loading don't need to import anything! like Projects module or projects-routing module
   ],
   providers: [MyfilterPipe],
   bootstrap: [AppComponent]

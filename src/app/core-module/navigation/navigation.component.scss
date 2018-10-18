@@ -13,9 +13,8 @@
   outline: 0;
 }
 .social-media > a > i {
-  opacity: 1;
-  display: inline;
-  padding: 10px;
+  width: 25%;
+  text-align: center;
   &:hover {
     opacity: 0.6;
   }

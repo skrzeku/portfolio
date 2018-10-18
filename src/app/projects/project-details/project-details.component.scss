@@ -1,0 +1,59 @@
+@import "../../../assets/styles/variables";
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+
+
+@keyframes showDynamicComponent {
+  0% { opacity: 0;}
+  90% { opacity: 1;
+
+  }
+}
+.container-fluid {
+  //@include animation('slide-down 2s');
+
+}
+.mydiv {
+  position: absolute;
+  top: 0;
+  left: 15%;
+  padding: 10%;
+  height: 100vh;
+  width: 85%;
+  -o-backdrop-filter: blur(5px);
+  -ms-backdrop-filter: blur(5px);
+  -moz-backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  z-index: 0;
+  @include animation ('showDynamicComponent 2s');
+}
+.detail-inside {
+  width: 100%;
+  height: 100%;
+  background-color: $mainColor;
+  background: rgba(100, 149, 237, 0.6);
+}
