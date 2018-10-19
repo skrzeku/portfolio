@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {CoreModuleModule} from './core-module/core-module.module';
@@ -11,6 +11,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {SharedModuleModule} from './shared-module/shared-module.module';
 import {MyfilterPipe} from './shared-module/pipes/myfilter.pipe';
 import {ProjectsRoutingModule} from './projects/projects-routing.module';
+import {RouterModule, RouterOutlet} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -24,10 +25,12 @@ import {ProjectsRoutingModule} from './projects/projects-routing.module';
     ContactModule,
     BrowserAnimationsModule,
     SharedModuleModule,
+    RouterModule
 
     //lazy loading don't need to import anything! like Projects module or projects-routing module
   ],
   providers: [MyfilterPipe],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

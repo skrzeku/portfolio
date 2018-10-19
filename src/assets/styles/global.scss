@@ -1,9 +1,8 @@
 @import "variables";
 .myfixed {
-  position: fixed;
-  left: 0;
+  @include MyFixed_Top_Left_textwhite(0,0);
   z-index: 10;
-  top: 0;
+  color: black;
   height: 100%;
   width: 15%;
 }
@@ -32,14 +31,12 @@ body {
 .navbar-brand {
   font-family: "Comic Sans MS";
   font-size: 1.5rem;
-width: 70%;
+  width: 70%;
 }
 .social-media {
+  @include MyFixed_Top_Left_textwhite(90vh, 0);
+  @include WidthHeight(100%, 20vh);
   position: absolute;
-  top: 90vh;
-  left: 0;
-  width: 100%;
-  height: 20vh;
   background-color: $mainColor;
 }
 .c-pointer {
@@ -73,8 +70,7 @@ body {
 
   .myfixed {
     position: relative;
-    width: 100%;
-    height: auto;
+    @include WidthHeight(100%, auto);
   }
 
   .router {

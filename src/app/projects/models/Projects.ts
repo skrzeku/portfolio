@@ -4,4 +4,5 @@ public img_url: string;
 public language: string;
 public shortdescription: string;
 public description: string;
+public tools: string;
 }

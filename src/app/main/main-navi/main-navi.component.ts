@@ -12,6 +12,7 @@ export class MainNaviComponent implements OnInit {
   @ViewChild ('mainnavbar') mainnavbar: ElementRef;
   myelement: any;
   myposition: number;
+  fixednavbar: boolean = false;
 
   constructor(private render: Renderer2,
               private mainservice: MainService) { }
@@ -25,7 +26,7 @@ export class MainNaviComponent implements OnInit {
   }
 
 
-  fixednavbar: boolean = false;
+
 
   myfunc (): void {
     this.myposition = document.querySelector('#fat').getBoundingClientRect().top;

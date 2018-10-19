@@ -24,28 +24,35 @@ export class ProjectsComponent implements OnInit {
       img_url: 'myurl',
       language: 'Java',
       shortdescription: 'java game',
-      description: 'it was one of my first project and my first adventure with java'
+      description: 'This is one of the first projects I decided to publish. A small window game TicTacToe ' +
+      'I developed the mechanism of the game and victory or draw. The downside of this application was the lack of randomness at the start of the game.',
+      tools: 'Java, WindowBuilder, IDE Eclipse'
     },
     {
       id: 2,
       img_url: 'myurl',
       language: 'HTML',
       shortdescription: 'Furniture app',
-      description: 'it was one of my first project and my first adventure with java'
+      description: 'The Furniture App was my first JavaScript application and I decided to use the JQuery library. Creating this application gave me the ' +
+      'motivation to learn more about the secrets of JavaScript. In the application it is possible to add, edit, delete individual elements in the project. ' +
+      'At some point I decided to interrupt the development of this application. I was already thinking about my further learning path and further projects.',
+      tools: 'HTML5, CSS3, JavaScript, JQuery, Bootstrap'
     },
     {
       id: 3,
       img_url: 'myurl',
       language: 'HTML',
       shortdescription: 'First WebSite',
-      description: 'it was one of my first project and my first adventure with java'
+      description: 'it was one of my first project and my first adventure with java',
+      tools: 'HTML5, CSS3, JavaScript, JQuery, Bootstrap'
     },
     {
       id: 4,
       img_url: 'myurl',
       language: 'Angular',
       shortdescription: 'Small Shop',
-      description: 'it was one of my first project and my first adventure with java'
+      description: 'it was one of my first project and my first adventure with java',
+      tools: 'TypeScript, Angular v4, Rest API, Loopback, HTML5, LESS, Bootstrap'
     },
     {
       id: 5,
@@ -53,12 +60,14 @@ export class ProjectsComponent implements OnInit {
       language: 'Angular',
       //language: ['Angular', 'TypeScript', 'HTML', 'CSS'],
       shortdescription: 'Current WebSite',
-      description: 'it was one of my first project and my first adventure with java'
+      description: 'it was one of my first project and my first adventure with java',
+      tools: 'TypeScript, Angular v6, HTML5, SCSS, Bootstrap'
     }
   ];
 
   filters: Filter[] = [];
   myRef: any;
+  BehaviorSubjectDefault: boolean = false;
 
 
 
@@ -94,15 +103,16 @@ export class ProjectsComponent implements OnInit {
   }
   destroyComponent() {
     this.myRef.destroy();
+    this.mainservice.ShareFromTemplate(false);
   }
 
   //Checkclose : value was emited by BehaviorSubject!
   CheckCloseValue (): void {
     this.mainservice.emitLikeOutput.subscribe(value2 => {
       if (value2) {
-        this.myRef.destroy();
+        this.destroyComponent();
       }
-      else return;
+      else console.log(value2);
     });
   }
 

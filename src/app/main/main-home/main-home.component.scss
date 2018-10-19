@@ -1,27 +1,20 @@
+@import "../../../assets/styles/variables";
 .fas {
+  @include MyFixed_Top_Left_textwhite(70vh, 50vw);
   font-size: 3rem;
   transition: top ease 0.5s;
   &:hover {
     top: 73vh;
   }
 }
-.mainfixed {
-  position: fixed;
-  color: white;
-  z-index: 1;
-  top: 70vh;
-  left: 50vw;
-}
 .homesection {
-  top: 25vh;
-  left: 20vw;
+  @include MyFixed_Top_Left_textwhite(25vh, 20vw);
 }
 .myrelative {
-  top: 67vh;
-  left: 41vw !important;
+  @include MyFixed_Top_Left_textwhite(67vh, 41vw);
 }
 .object{
-  height: 100vh;
+  @include WidthHeight(auto, 100vh);
   background-size: cover;
   background-attachment: fixed;
   padding-top: 350px;

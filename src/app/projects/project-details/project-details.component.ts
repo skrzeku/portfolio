@@ -29,7 +29,7 @@ export class ProjectDetailsComponent implements OnInit {
     this.OutputClose.emit(true);
   }
   EmitCloseByService (value: boolean) {
-    this.mainservice.ShareFromTemplate(value);
+    this.mainservice.ShareFromTemplate(true);
   }
 
 }

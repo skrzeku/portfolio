@@ -1,9 +1,8 @@
+@import "../../../assets/styles/variables";
 #mainnavbar {
-  height: 6vh;
+  @include WidthHeight(100%, 6vh);
   z-index: 30;
-  color: white;
   margin-top: -6vh;
-  width: 100%;
 }
 .alists > a {
   margin-left: 15px;
@@ -18,9 +17,8 @@
 .active {
   height: 6vh;
   color: white !important;
-  background-color: cornflowerblue;
+  background-color: $mainColor;
 }
-
 
                                  // Extra small devices (portrait phones, less than 576px)
                                  // No media query since this is the default in Bootstrap

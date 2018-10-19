@@ -1,11 +1,25 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-12 mydiv"> <div class="detail-inside">
-      {{project.id}}
-      {{project.description}}
-    </div>
+    <div class="col-sm-12 mydiv">
+      <div class="position-relative detail-inside p-2">
+        <button type="button" class="close" aria-label="Close" (click)="EmitCloseByService(true)" style="margin-bottom: 5px">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="row">
+          <div class="col-sm-6">
+            <img src="../../../assets/images/strona1.png" style="width: 100% ; height: auto">
+          </div>
+          <div class="col-sm-6 text-white">
+            <h3>{{project.shortdescription}}</h3>
 
-      <button class="btn float-right" (click)="EmitCloseByService(true)">Close</button>
+            {{project.description}}
+
+          </div>
+          <div class="col-sm-12 position-absolute" style="bottom: 0; left: 0">
+            <p>Tools: {{project.tools}}</p>
+          </div>
+        </div>
+    </div>
     </div>
   </div>
 </div>
