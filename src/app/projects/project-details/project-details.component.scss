@@ -6,7 +6,7 @@
   }
 }
 .mydiv {
-  @include MyFixed_Top_Left_textwhite(0, 15%);
+  @include MyFixed_Top_Left_textwhite(0, 15%, white);
   padding: 10%;
   @include WidthHeight(85%, 100vh);
   @include myblur(5px);

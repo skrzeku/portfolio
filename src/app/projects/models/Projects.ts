@@ -5,4 +5,5 @@ public language: string;
 public shortdescription: string;
 public description: string;
 public tools: string;
+public gitUrl: string;
 }

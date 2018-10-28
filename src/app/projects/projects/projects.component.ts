@@ -1,4 +1,4 @@
-import {Component, ComponentFactoryResolver, OnInit, Type, ViewChild, ViewContainerRef} from '@angular/core';
+import {Component, ComponentFactoryResolver, ContentChild, OnInit, TemplateRef, Type, ViewChild, ViewContainerRef} from '@angular/core';
 import {Project} from '../models/Projects';
 import {Filter} from '../models/Filter';
 import {FilterComponent} from '../filter/filter.component';
@@ -14,6 +14,7 @@ import {ProjectDetailsComponent} from '../project-details/project-details.compon
 export class ProjectsComponent implements OnInit {
   @ViewChild('filterchild') filterchild: FilterComponent;
   @ViewChild ('templateDetails' , {read: ViewContainerRef}) templateDetails: ViewContainerRef;
+  @ContentChild(TemplateRef) NoProjects: TemplateRef<any>;
 
 
 
@@ -25,34 +26,52 @@ export class ProjectsComponent implements OnInit {
       language: 'Java',
       shortdescription: 'java game',
       description: 'This is one of the first projects I decided to publish. A small window game TicTacToe ' +
-      'I developed the mechanism of the game and victory or draw. The downside of this application was the lack of randomness at the start of the game.',
-      tools: 'Java, WindowBuilder, IDE Eclipse'
+      'I developed the mechanism of the game and victory or draw. ' +
+      'The downside of this application was the lack of randomness at the start of the game.',
+      tools: 'Java, WindowBuilder, IDE Eclipse',
+      gitUrl: 'https://github.com/skrzeku/java-game'
     },
     {
       id: 2,
       img_url: 'myurl',
       language: 'HTML',
       shortdescription: 'Furniture app',
-      description: 'The Furniture App was my first JavaScript application and I decided to use the JQuery library. Creating this application gave me the ' +
-      'motivation to learn more about the secrets of JavaScript. In the application it is possible to add, edit, delete individual elements in the project. ' +
-      'At some point I decided to interrupt the development of this application. I was already thinking about my further learning path and further projects.',
-      tools: 'HTML5, CSS3, JavaScript, JQuery, Bootstrap'
+      description: 'The Furniture App was my first JavaScript application and I decided to use the JQuery library.' +
+      ' Creating this application gave me the ' +
+      'motivation to learn more about the secrets of JavaScript. ' +
+      'In the application it is possible to add, edit, delete individual elements in the project. ' +
+      'At some point I decided to interrupt the development of this application. ' +
+      'I was already thinking about my further learning path and further projects.',
+      tools: 'HTML5, CSS3, JavaScript, JQuery, Bootstrap',
+      gitUrl: 'https://github.com/skrzeku/furniture_app'
     },
     {
       id: 3,
       img_url: 'myurl',
       language: 'HTML',
       shortdescription: 'First WebSite',
-      description: 'it was one of my first project and my first adventure with java',
-      tools: 'HTML5, CSS3, JavaScript, JQuery, Bootstrap'
+      description: 'My first web page which I decided to publish on the Internet. ' +
+      'This project taught me a lot, I started to use more and more complicated scripts ' +
+      'and in order to deepen my knowledge of JavaScript. ' +
+      'Now I can see how many imperfections this project has, so I decided to make my current website. ' +
+      'The seoptimer.com rating of "E" made me realize how much I still have to learn.',
+      tools: 'HTML5, CSS3, JavaScript, JQuery, Bootstrap',
+      gitUrl: 'https://github.com/skrzeku/Site'
     },
     {
       id: 4,
       img_url: 'myurl',
       language: 'Angular',
       shortdescription: 'Small Shop',
-      description: 'it was one of my first project and my first adventure with java',
-      tools: 'TypeScript, Angular v4, Rest API, Loopback, HTML5, LESS, Bootstrap'
+      description: 'In order to broaden my knowledge of JavaScript and widely understood "Front-end" I decided to ' +
+      'go further and execute my first project ' +
+      'using one of the biggest Javascript frameworks - Angular. ' +
+      'While doing this project I was inspired by olx.pl store. "My shop" allowed the registration of new customers by ' +
+      'adding them to the customer Database. Each registered user could add and delete their items. ' +
+      'Users who do not have an account in the shop can only browse the products.' +
+      'All operations on products were possible through the written Rest-Api application.',
+      tools: 'TypeScript, Angular v4, Rest API, Loopback, HTML5, LESS, Bootstrap',
+      gitUrl: 'https://github.com/skrzeku/SmallShop'
     },
     {
       id: 5,
@@ -61,13 +80,13 @@ export class ProjectsComponent implements OnInit {
       //language: ['Angular', 'TypeScript', 'HTML', 'CSS'],
       shortdescription: 'Current WebSite',
       description: 'it was one of my first project and my first adventure with java',
-      tools: 'TypeScript, Angular v6, HTML5, SCSS, Bootstrap'
+      tools: 'TypeScript, Angular v6, HTML5, SCSS, Bootstrap',
+      gitUrl: 'https://github.com/skrzeku/portfolio'
     }
   ];
 
   filters: Filter[] = [];
   myRef: any;
-  BehaviorSubjectDefault: boolean = false;
 
 
 

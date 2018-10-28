@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-12 mydiv">
-      <div class="position-relative detail-inside p-2">
+      <div class="position-relative detail-inside p-2" id="siema">
         <button type="button" class="close" aria-label="Close" (click)="EmitCloseByService(true)" style="margin-bottom: 5px">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -9,14 +9,13 @@
           <div class="col-sm-6">
             <img src="../../../assets/images/strona1.png" style="width: 100% ; height: auto">
           </div>
-          <div class="col-sm-6 text-white">
+          <div class="col-sm-6 text-white lol">
             <h3>{{project.shortdescription}}</h3>
-
             {{project.description}}
-
           </div>
           <div class="col-sm-12 position-absolute" style="bottom: 0; left: 0">
-            <p>Tools: {{project.tools}}</p>
+            <p class="m-0">Tools: {{project.tools}}</p>
+            GitHub: <a class="m-0" target="_blank" rel="noopener" href={{project.gitUrl}}>{{project.shortdescription}}.git</a>
           </div>
         </div>
     </div>

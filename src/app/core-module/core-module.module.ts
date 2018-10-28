@@ -1,8 +1,9 @@
-import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
+import {NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {NavigationComponent} from './navigation/navigation.component';
 import {Router, RouterModule} from '@angular/router';
 import {MatTooltip, MatTooltipModule} from '@angular/material';
+import {AppRoutingModule} from '../app-routing.module';
 
 @NgModule({
   imports: [
@@ -12,6 +13,5 @@ import {MatTooltip, MatTooltipModule} from '@angular/material';
   ],
   exports: [NavigationComponent],
   declarations: [NavigationComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class CoreModuleModule { }

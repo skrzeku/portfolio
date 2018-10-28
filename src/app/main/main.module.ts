@@ -8,6 +8,7 @@ import {MatTooltipModule} from '@angular/material';
 import {MainService} from '../shared-module/services/main.service';
 import {SharedModuleModule} from '../shared-module/shared-module.module';
 import {RouterModule} from '@angular/router';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import {RouterModule} from '@angular/router';
     CoreModuleModule,
     MatTooltipModule,
     SharedModuleModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   exports: [MainComponent],
   declarations: [MainComponent, MainNaviComponent, MainHomeComponent]

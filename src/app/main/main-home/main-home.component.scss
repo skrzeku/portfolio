@@ -1,6 +1,6 @@
 @import "../../../assets/styles/variables";
 .fas {
-  @include MyFixed_Top_Left_textwhite(70vh, 50vw);
+  @include MyFixed_Top_Left_textwhite(70vh, 50vw, white);
   font-size: 3rem;
   transition: top ease 0.5s;
   &:hover {
@@ -8,10 +8,10 @@
   }
 }
 .homesection {
-  @include MyFixed_Top_Left_textwhite(25vh, 20vw);
+  @include MyFixed_Top_Left_textwhite(25vh, 20vw, white);
 }
 .myrelative {
-  @include MyFixed_Top_Left_textwhite(67vh, 41vw);
+  @include MyFixed_Top_Left_textwhite(67vh, 41vw, white);
 }
 .object{
   @include WidthHeight(auto, 100vh);

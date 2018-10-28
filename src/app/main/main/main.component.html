@@ -2,9 +2,9 @@
 <div class="container-fluid text-justify">
   <div class="row">
     <div class="col-sm-12 p-0"><app-main-home></app-main-home></div>
-    <div class="col-sm-12 p-0"><app-main-navi></app-main-navi></div>
+    <div class="col-sm-12 p-0"><app-main-navi #naviChild></app-main-navi></div>
     <div class="col-sm-12 p-md-2 p-sm-3 myind">
-      <div class="section" id="fat">
+      <div #fat1 class="section" id="fat">
         <h4>@About Me</h4>
       <p>I come from Poland, and i'm 26. I grew up in a small town near Olsztyn. <br />
         I graduated from the University of Warmia and Mazury in Olsztyn with an engineering degree in the field of management and production engineering.</p>
@@ -22,19 +22,18 @@
         <div class="row">
       <div class="col-md-6 col-sm-12">
         <div class="row">
-          <div class="col-sm-6">
-            <div class="skill-name">HTML5</div>
-            <div class="skill-name">CSS3/Less/SCSS</div>
+          <div class="col-sm-6 position-relative">
+            <div class="skill-name">
+              <div class="myimages">HTML5</div>
+              <div class="rating"><img src="../../../assets/images/4-stars.png" class="myimages"></div>
+            </div>
+            <div class="rating ml-5"><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></div>
+            <div class="skill-name">HTML 5<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
+            <div class="skill-name">
+              <i class="fab fa-css3-alt"></i><i class="fab fa-less"></i><i class="fab fa-sass"></i>CSS3/Less/SCSS</div>
             <div class="skill-name">Responsive Web Design</div>
             <div class="skill-name">Bootstrap</div>
             <div class="skill-name">English</div>
-          </div>
-          <div class="col-sm-6">
-            <div class="skill-name"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
-            <div class="skill-name"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
-            <div class="skill-name"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
-            <div class="skill-name"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
-            <div class="skill-name"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
           </div>
         </div>
          </div>
@@ -42,10 +41,11 @@
         <div class="col-md-6 col-sm-12">
           <div class="row">
             <div class="col-sm-6">
-              <div class="skill-name">JavaScript/ES6-7/TypeScript</div>
-              <div class="skill-name">jQuery</div>
-              <div class="skill-name">Angular 4+</div>
-              <div class="skill-name">Git</div>
+              <div class="skill-name"><img src="../../../assets/images/javascript.png" alt="JS" class="myimages">
+                <img src= {{images_imp}}"ts.png" alt="ts" class="myimages">JavaScript/ES6-7/TypeScript</div>
+              <div class="skill-name"><img src="../../../assets/images/jquery.jpg" class="myimages">jQuery</div>
+              <div class="skill-name"><img src="../../../assets/images/angular.png" class="myimages">Angular 4+</div>
+              <div class="skill-name"><img src="../../../assets/images/git.png" class="myimages"> Git</div>
               <div class="skill-name">Search Engine Optimization (SEO)</div>
             </div>
             <div class="col-sm-6">
@@ -53,8 +53,6 @@
               <div class="skill-name"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
               <div class="skill-name"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
               <div class="skill-name"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
-
-
             </div>
           </div>
 
@@ -62,8 +60,16 @@
         </div>
       </div>
       <div class="section" id="two">
-        <h4>two</h4>
-      <p>Everything in the above projects was invented and written by me</p>
+        <h4>@Ask Me</h4>
+        <p>Would you like to ask me about my projects? Do u want to send me any Work offer, ask me about my CV? Let's use my form to send a mail!</p>
+        <div class="form-group" id="myEmailForm">
+        <span>Subject</span>
+        <input type="text" id="subject" [(ngModel)]="subject">
+        <span>Text</span>
+        <textarea id="Body" [(ngModel)]="Body" rows="4" cols="50" ></textarea>
+      </div>
+
+        <button type="submit" class="btn btn-primary" (click)="SendMail(subject,Body)">Send Mail</button>
       </div>
     </div>
     <div class="col-sm-12 footer text-center small">Copyright © 2017 Website - Paweł Skrzeszewski all rights reserved. </div>

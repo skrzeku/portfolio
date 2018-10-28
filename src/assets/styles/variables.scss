@@ -36,9 +36,9 @@ $mainColor: cornflowerblue;
   width: $width;
   height: $height;
 }
-@mixin MyFixed_Top_Left_textwhite ($top, $left) {
+@mixin MyFixed_Top_Left_textwhite ($top, $left, $color) {
   position: fixed;
-  color: white;
+  color: $color;
   z-index: 1;
   top: $top;
   left: $left;

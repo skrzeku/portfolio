@@ -1,7 +1,7 @@
 <h1 class="headers text-center mt-3">Projects</h1>
 <app-filter #filterchild></app-filter>
 <div class="container p-5">
-  <div class="row">
+  <div class="row" *ngIf="projects && projects.length > 0; else NoProjects">
   <div class="col-sm-3 smallprojects position-relative m-3 c-pointer" *ngFor="let project of projects | myfilter: filters" (click)="CreateDynamicDataComponent(project)">
     <div class="myposition position-absolute"><p class="inside text-white text-center">{{project.shortdescription}}</p></div>
   </div>
@@ -11,4 +11,5 @@
     </div>
   </div>
   <ng-template #templateDetails></ng-template>
+  <ng-template #NoProjects><h2>Something went wrong! Let's try once again!</h2></ng-template>
 </div>

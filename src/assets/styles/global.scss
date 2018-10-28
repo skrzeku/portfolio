@@ -1,8 +1,7 @@
 @import "variables";
 .myfixed {
-  @include MyFixed_Top_Left_textwhite(0,0);
+  @include MyFixed_Top_Left_textwhite(0,0, black);
   z-index: 10;
-  color: black;
   height: 100%;
   width: 15%;
 }
@@ -34,7 +33,7 @@ body {
   width: 70%;
 }
 .social-media {
-  @include MyFixed_Top_Left_textwhite(90vh, 0);
+  @include MyFixed_Top_Left_textwhite(90vh, 0, white);
   @include WidthHeight(100%, 20vh);
   position: absolute;
   background-color: $mainColor;
