@@ -15,6 +15,8 @@ h4 {
 }
 .skill-name {
   padding: 15px 0 15px 40px;
+  margin: 10px 0 0 5px;
+  border: solid $mainColor 3px;
 }
 #myEmailForm > span{
   display: block;
@@ -26,9 +28,16 @@ h4 {
 .rating {
  width: 100px;
 }
-.skill-name > div {
-  margin: 10px;
-  display: inline;
+.stars {
+  float: right;
+}
+.myposleft {
+  left: -100px;
+  opacity: 0;
+}
+.myposright {
+  right: -100px;
+  opacity: 0;
 }
 
 

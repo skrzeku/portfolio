@@ -20,44 +20,22 @@
       <div class="section" id="one">
         <h4>@Skills</h4>
         <div class="row">
-      <div class="col-md-6 col-sm-12">
-        <div class="row">
-          <div class="col-sm-6 position-relative">
-            <div class="skill-name">
-              <div class="myimages">HTML5</div>
-              <div class="rating"><img src="../../../assets/images/4-stars.png" class="myimages"></div>
-            </div>
-            <div class="rating ml-5"><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></div>
-            <div class="skill-name">HTML 5<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
-            <div class="skill-name">
-              <i class="fab fa-css3-alt"></i><i class="fab fa-less"></i><i class="fab fa-sass"></i>CSS3/Less/SCSS</div>
-            <div class="skill-name">Responsive Web Design</div>
-            <div class="skill-name">Bootstrap</div>
-            <div class="skill-name">English</div>
-          </div>
-        </div>
-         </div>
+      <div class="col-md-6 col-sm-12 p-3 myposleft" #skillleft>
+        <div class="skill-name"><b>HTML 5</b><div class="stars" [innerHtml]="threestars"></div></div>
+        <div class="skill-name"><b>CSS3/Less/SCSS</b><div class="stars" [innerHtml]="threestars"></div></div>
+        <div class="skill-name"><b>Responsive Web Design</b><div class="stars" [innerHtml]="fourstars"></div></div>
+        <div class="skill-name"><b>Bootstrap</b><div class="stars" [innerHtml]="fourstars"></div></div>
+        <div class="skill-name"><b>TDD, Jasmine, Karma</b><div class="stars" [innerHtml]="twostars"></div></div>
+      </div>
 
-        <div class="col-md-6 col-sm-12">
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="skill-name"><img src="../../../assets/images/javascript.png" alt="JS" class="myimages">
-                <img src= {{images_imp}}"ts.png" alt="ts" class="myimages">JavaScript/ES6-7/TypeScript</div>
-              <div class="skill-name"><img src="../../../assets/images/jquery.jpg" class="myimages">jQuery</div>
-              <div class="skill-name"><img src="../../../assets/images/angular.png" class="myimages">Angular 4+</div>
-              <div class="skill-name"><img src="../../../assets/images/git.png" class="myimages"> Git</div>
-              <div class="skill-name">Search Engine Optimization (SEO)</div>
-            </div>
-            <div class="col-sm-6">
-              <div class="skill-name"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>              <div class="skill-name"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-              <div class="skill-name"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
-              <div class="skill-name"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
-              <div class="skill-name"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
-            </div>
+          <div class="col-md-6 col-sm-12 p-3 myposright" #skillright>
+              <div class="skill-name"><b>JavaScript/ES6-7/TypeScript</b><div class="stars" [innerHtml]="fourstars"></div></div>
+              <div class="skill-name"><b>jQuery</b><div class="stars" [innerHtml]="threestars"></div></div>
+              <div class="skill-name"><b>Angular 4+</b><div class="stars" [innerHtml]="fourstars"></div></div>
+              <div class="skill-name"><b>Git</b><div class="stars" [innerHtml]="threestars"></div></div>
+              <div class="skill-name"><b>Search Engine Optimization (SEO)</b><div class="stars" [innerHtml]="twostars"></div></div>
           </div>
-
-        </div>
-        </div>
+      </div>
       </div>
       <div class="section" id="two">
         <h4>@Ask Me</h4>

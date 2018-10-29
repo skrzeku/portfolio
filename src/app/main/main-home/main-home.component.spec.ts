@@ -27,15 +27,14 @@ describe('MainHomeComponent', () => {
     fixture.detectChanges();
     service.ScrolltoElement(div, 0, 100);
     position = window.pageYOffset;
-
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
   it('pageYoffset after ScrollToElement cannot to equal 0', () => {
     console.log('posi' + position);
     expect(position).not.toEqual(0);
   });
-
 });
