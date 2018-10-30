@@ -22,6 +22,10 @@ export class MainComponent implements OnInit, AfterViewInit {
   rightpos: any;
   leftandrightTop: number;
   myposition: number;
+  aboutposition: number;
+  whatposition: number;
+  skillsposition: number;
+  askmeposition: number;
   i: number = 0;
   fourstars: string = '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>';
   threestars: string = '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>';
@@ -29,15 +33,15 @@ export class MainComponent implements OnInit, AfterViewInit {
 
   constructor(private renderer: Renderer2) { }
 
-    ngOnInit() {}
+    ngOnInit() {
+      this.GetHYMLElements();
+    }
 
   ngAfterViewInit() {
     const Siema = this.fat1.nativeElement;
     this.leftpos = this.skillleft.nativeElement;
     this.rightpos = this.skillright.nativeElement;
     this.myposition = Siema.getBoundingClientRect().top;
-    const bot = this.leftpos.getBoundingClientRect().bottom;
-    const top = this.leftpos.getBoundingClientRect().top;
     this.leftandrightTop = this.leftpos.getBoundingClientRect().top;
   }
 
@@ -55,9 +59,36 @@ export class MainComponent implements OnInit, AfterViewInit {
     else return;
   }
 
+  AddClassActive (numb: number): void {
+    let siema = document.querySelectorAll('.nav-item').item(numb);
+    siema.classList.add('active');
+  }
+  RemoveClassActive (): void {
+    for (let s = 0; s < 4; s++) {
+      let siema = document.querySelectorAll('.nav-item').item(s);
+      siema.classList.remove('active');
+    }
+
+  }
+
+  GetHYMLElements (): void {
+    let about = document.querySelector('.myrelative');
+    console.log(about);
+    this.aboutposition = about.getBoundingClientRect().top;
+    let whatido = document.querySelector('#mdo');
+    this.whatposition = whatido.getBoundingClientRect().top;
+    let skills = document.querySelector('#one');
+    this.skillsposition = skills.getBoundingClientRect().top;
+    let askme = document.querySelector('#two');
+    this.askmeposition = askme.getBoundingClientRect().top;
+  }
+
+
+
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
     const scrollPosition = window.pageYOffset;
+    this.checkScrollNavi();
     let i: number = 0;
     if (scrollPosition <= (this.myposition - 50)) {
       this.naviChild.fixednavbar = false;
@@ -69,6 +100,30 @@ export class MainComponent implements OnInit, AfterViewInit {
       i++;
       this.LeftAnimate(this.leftpos, 'left', i);
       this.LeftAnimate(this.rightpos, 'right', i);
+    }
+  }
+
+  //@HostListener('window:scroll', ['$event2'])
+  checkScrollNavi() {
+    const scrollPosition = window.pageYOffset;
+    if (scrollPosition < (this.myposition - 50)) {
+      this.RemoveClassActive();
+    }
+    if (scrollPosition >= (this.myposition - 50)) {
+      this.RemoveClassActive();
+      this.AddClassActive(0);
+    }
+    if (scrollPosition >= (this.whatposition - 350)) {
+      this.RemoveClassActive();
+      this.AddClassActive(1);
+    }
+    if (scrollPosition >= (this.skillsposition - 350)) {
+      this.RemoveClassActive();
+      this.AddClassActive(2);
+    }
+    if (scrollPosition >= (this.askmeposition - 350)) {
+      this.RemoveClassActive();
+      this.AddClassActive(3);
     }
   }
 

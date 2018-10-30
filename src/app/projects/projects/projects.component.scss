@@ -7,6 +7,7 @@
     opacity: 0.8;
     border: solid $mainColor 3px;
   }
+
   &:hover .myposition {
     height: 40px;
   }
@@ -24,8 +25,8 @@
 }
 .inside {
   opacity: 0.0;
-  -webkit-transition: opacity 900ms;
-  transition: opacity 900ms;
+  -webkit-transition: all 900ms;
+  transition: all 900ms;
 }
 
 /*  -webkit-transform: scale(0.8);

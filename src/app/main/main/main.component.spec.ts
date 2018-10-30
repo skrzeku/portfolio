@@ -9,6 +9,8 @@ import {FormsModule} from '@angular/forms';
 describe('MainComponent', () => {
   let component: MainComponent;
   let fixture: ComponentFixture<MainComponent>;
+  let myquery: any;
+  let query: any;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -21,10 +23,19 @@ describe('MainComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(MainComponent);
     component = fixture.componentInstance;
+
+    myquery = document.querySelectorAll('.nav-item').item(0);
+    query = document.querySelector('.myrelative').getBoundingClientRect().top;
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+  it('element of children component should be defined ', () => {
+    expect(myquery).toBeDefined();
+  });
+  it('getBoundingClientRect of children component works ',  () => {
+    expect(query).not.toEqual(0);
   });
 });
