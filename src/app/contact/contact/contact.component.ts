@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ContactComponent implements OnInit {
   Body: string;
   subject: string;
+  myemail: any;
+  email: any;
 
 
   constructor() { }
