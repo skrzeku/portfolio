@@ -12,8 +12,6 @@ import {MainNaviComponent} from '../main-navi/main-navi.component';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit, AfterViewInit {
-  subject: string;
-  Body: string;
   @ViewChild('fat1') fat1: ElementRef;
   @ViewChild('naviChild') naviChild: MainNaviComponent;
   @ViewChild('skillright') skillright: ElementRef;
@@ -25,7 +23,7 @@ export class MainComponent implements OnInit, AfterViewInit {
   aboutposition: number;
   whatposition: number;
   skillsposition: number;
-  askmeposition: number;
+  //askmeposition: number;
   i: number = 0;
   fourstars: string = '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>';
   threestars: string = '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>';
@@ -45,9 +43,7 @@ export class MainComponent implements OnInit, AfterViewInit {
     this.leftandrightTop = this.leftpos.getBoundingClientRect().top;
   }
 
-  SendMail(subject: string, body: string): void {
-    window.location.href = 'mailto:mail@example.org?subject=' + subject + '&body=' + body;
-  }
+
   LeftAnimate(element: any, dir: string, i: number): void {
     this.i++;
     if (this.i <= 2) {
@@ -64,7 +60,7 @@ export class MainComponent implements OnInit, AfterViewInit {
     siema.classList.add('active');
   }
   RemoveClassActive (): void {
-    for (let s = 0; s < 4; s++) {
+    for (let s = 0; s < 3; s++) {
       let siema = document.querySelectorAll('.nav-item').item(s);
       siema.classList.remove('active');
     }
@@ -79,8 +75,11 @@ export class MainComponent implements OnInit, AfterViewInit {
     this.whatposition = whatido.getBoundingClientRect().top;
     let skills = document.querySelector('#one');
     this.skillsposition = skills.getBoundingClientRect().top;
+
+    //i decided to move it to the contact module
+    /*
     let askme = document.querySelector('#two');
-    this.askmeposition = askme.getBoundingClientRect().top;
+    this.askmeposition = askme.getBoundingClientRect().top; */
   }
 
 
@@ -121,13 +120,5 @@ export class MainComponent implements OnInit, AfterViewInit {
       this.RemoveClassActive();
       this.AddClassActive(2);
     }
-    if (scrollPosition >= (this.askmeposition - 350)) {
-      this.RemoveClassActive();
-      this.AddClassActive(3);
-    }
   }
-
-
-
-
 }

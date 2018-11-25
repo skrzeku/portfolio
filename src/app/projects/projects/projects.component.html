@@ -1,13 +1,19 @@
-<h1 class="headers text-center mt-3">Projects</h1>
+
+
+<div class="headout p-3">
+  <h1 class="headers">Projects</h1>
+</div>
 <app-filter #filterchild></app-filter>
 <div class="container p-5">
   <div class="row" *ngIf="projects && projects.length > 0; else NoProjects">
-  <div class="col-sm-3 smallprojects position-relative m-3 c-pointer" *ngFor="let project of projects | myfilter: filters" (click)="CreateDynamicDataComponent(project)">
+  <div class="col-md-5 col-sm-12 smallprojects position-relative m-3" *ngFor="let project of projects | myfilter: filters" [ngStyle]="{'background-image':' url(' + project.img_url + ')'}">
+    <!--<img src="../../../assets/images/tictac.png" alt="tic" style="width: 100%"> -->
+    <i class="fas fa-search c-pointer" (click)="CreateDynamicDataComponent(project)"></i>
     <div class="myposition position-absolute"><p class="inside text-white text-center">{{project.shortdescription}}</p></div>
   </div>
     <div class="col-sm-12">
-      <p class="p-5">This tab will be edited with the appearance of new projects made by me.
-        Everything in the above projects was invented and written by me</p>
+      <p class="p-5 addtab text-center">This tab will be edited with the appearance of new projects made by me.
+        Everything in the above projects was invented and written by me.</p>
     </div>
   </div>
   <ng-template #templateDetails></ng-template>

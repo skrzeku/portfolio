@@ -2,10 +2,7 @@
 .fas {
   @include MyFixed_Top_Left_textwhite(70vh, 50vw, white);
   font-size: 3rem;
-  transition: top ease 0.5s;
-  &:hover {
-    top: 73vh;
-  }
+  @include animation('bounce 2s infinite');
 }
 .homesection {
   @include MyFixed_Top_Left_textwhite(25vh, 20vw, white);
@@ -13,6 +10,7 @@
 .myrelative {
   @include MyFixed_Top_Left_textwhite(67vh, 41vw, white);
 }
+
 .object{
   @include WidthHeight(auto, 100vh);
   background-size: cover;
@@ -21,6 +19,36 @@
   display: table;
 }
 .one{
-  background-image: url("../../../assets/images/7.jpg");
+  background-image: url("../../../assets/images/7new.jpg");
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+   @include translateAnimation(0);
+  }
+  40% {
+    @include translateAnimation(-20px);
+  }
+  60% {
+    @include translateAnimation(-10px);
+  } }
+
+
+
+
+
+
+//medium width
+@media (max-width: $small) {
+  .myrelative {
+    left: 15vw;
+    text-align: left;
+  }
+  .fas {
+    left: 34vw;
+  }
+  .homesection {
+    left: 10vw;
+    text-align: left;
+  }
 }
 

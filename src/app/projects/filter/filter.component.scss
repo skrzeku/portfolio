@@ -1,3 +1,12 @@
+@import "../../../assets/styles/variables";
 .ml-2 {
   cursor: pointer;
+  opacity: 1;
+  font-size: 1rem;
+  font-family: 'Cabin', sans-serif;
+  &:hover {
+    opacity: 0.7;
+    color: $mainColor !important;
+  }
 }
+

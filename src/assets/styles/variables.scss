@@ -1,6 +1,5 @@
-$maincolor: '#6495ED';
-$myblue: blue;
-$mainColor: cornflowerblue;
+$mainColor: #0074D9;
+$bgcolor: #f2f2f2;
 
 @mixin myblur($howmuch) {
   -o-backdrop-filter: blur($howmuch);
@@ -32,6 +31,15 @@ $mainColor: cornflowerblue;
   -o-animation: #{$str};
   animation: #{$str};
 }
+@mixin translateAnimation($num) {
+  -webkit-transform: translateY($num);
+  -moz-transform: translateY($num);
+  -ms-transform: translateY($num);
+  -o-transform: translateY($num);
+  transform: translateY($num);
+}
+
+
 @mixin WidthHeight($width, $height) {
   width: $width;
   height: $height;
@@ -43,3 +51,22 @@ $mainColor: cornflowerblue;
   top: $top;
   left: $left;
 }
+@mixin FloatCenter {
+  display: block;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+@mixin project_detatil_shadow {
+  -webkit-box-shadow: 0 0 137px 112px rgba(0,0,0,1);
+  -moz-box-shadow: 0 0 137px 112px rgba(0,0,0,1);
+  box-shadow: 0 0 137px 112px rgba(0,0,0,1);
+}
+
+  //media queries
+$x-large: 1200px;
+$large: 1199px;
+$medium: 991px;
+$small: 767px;
+$x-small: 575px;
+
+

@@ -7,47 +7,46 @@
 .alists > a {
   margin-left: 15px;
 }
+
                         //Added by ngClass
 .main-navbar-fixed {
   position: fixed;
   top: 6vh;
-  background-color: #eceff1;
-  color: black !important;
+  background-image: url("../../../assets/images/navbarfinal.png");
+  background-size: cover;
 }
 .active {
   height: 6vh;
-  color: white !important;
-  background-color: $mainColor;
+  background-color: #f2f2f2;
+  color: black !important;
 }
 
-                                 // Extra small devices (portrait phones, less than 576px)
-                                 // No media query since this is the default in Bootstrap
-@media (max-width: 575px) {
+
+@media (max-width: $x-small) {
 
 }
 
 // Small devices (landscape phones, 576px and up)
-@media (max-width: 767px) {
+@media (max-width: $small) {
   #mainnavbar {
     display: none;
   }
 }
 
 // Medium devices (tablets, 768px and up)
-@media (max-width: 991px) {
+@media (max-width: $medium) {
   .alists > a {
     font-size: 1.2rem;
   }
   .navbar-nav {
     flex-direction: row;
   }
-
 }
 
 // Large devices (desktops, 992px and up)
-@media (max-width: 1199px) {
+@media (max-width: $large) {
 }
 
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
+@media (min-width: $x-large) {
 }

@@ -1,7 +1,28 @@
+
+
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-12 p-0">
-      <h1 class="headers text-center mt-3">Contact</h1>
+    <div class="col-sm-12 headout p-3 mb-5">
+      <h1 class="headers">Contact</h1>
+    </div>
+    <div class="offset-sm-1 col-sm-10 p-3">
+      <div class="textaboutmail p-3">
+        <p>Would you like to ask me about my projects? Do u want to send me any Work offer,
+          ask me about my CV?
+          I’ll try my best to answer the questions.</p>
+      <p>For contact you can use both the contact form and my email below.</p></div>
+    </div>
+    <div class="offset-sm-1 col-sm-10 alldiv">
+      <form [formGroup]="myemail" class="form-group p-4" id="myEmailForm">
+        <input type="text" name="subject" id="subject" [(ngModel)]="subject" class="myinput w-50" placeholder="Subject">
+        <input type="text" name="email" id="email" [(ngModel)]="email" class="myinput w-50" placeholder="Subject">
+        <textarea name="Body" id="Body" [(ngModel)]="Body" class="myinput mt-4 w-100" placeholder="Text"></textarea>
+        <button type="submit" class="btn btn-primary mybutton" (click)="SendMail(subject,Body)">Send Mail</button>
+      </form>
     </div>
   </div>
 </div>
+
+
+
+

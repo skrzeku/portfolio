@@ -5,15 +5,37 @@
   90% { opacity: 1;
   }
 }
+
+
 .mydiv {
   @include MyFixed_Top_Left_textwhite(0, 15%, white);
-  padding: 10%;
+  padding: 5%;
   @include WidthHeight(85%, 100vh);
-  @include myblur(5px);
   @include animation ('showDynamicComponent 2s');
 }
 .detail-inside {
   @include WidthHeight(100%, 100%);
+  position: relative;
   border: gray 1px solid;
+  @include project_detatil_shadow;
   background: rgba(100, 149, 237, 0.6);
+}
+
+                                          //media queries
+@media (max-width: $small) {
+ .mydiv {
+   left: 0;
+ }
+}
+
+/* Gets applied if supported only */
+@supports ((-webkit-backdrop-filter: blur(5px))) {
+  .mydiv {
+   @include myblur(5px);
+  }
+  .detail-inside {
+    -webkit-box-shadow: 0 0 0 0;
+    -moz-box-shadow: 0 0 0 0;
+    box-shadow: 0 0 0 0;
+  }
 }

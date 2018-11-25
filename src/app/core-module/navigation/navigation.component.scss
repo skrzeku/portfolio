@@ -2,11 +2,14 @@
 
 .navbar-nav > li {
   padding: 10px 3px 10px 6px;
+  width: 100%;
 }
 .active {
   width: 100%;
-  border-left: cornflowerblue solid 4px;
-  box-shadow: 10px 10px 5px lightgray;
+  border-left: $mainColor solid 4px;
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(255,255,255,1);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(255,255,255,1);
+  box-shadow: 4px 4px 8px 0px rgba(255,255,255,1);
 }
 //To delete blue outline!
 .navbar-nav li {
@@ -19,11 +22,17 @@
     opacity: 0.6;
   }
 }
+.myfixed {
+  background-image: url("../../../assets/images/7navnew.png");
+  background-size: cover;
+}
 
 .myshadow {
   box-shadow: 0 4px 4px 10px rgba(0, 0, 0, 0.2), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
 }
 .fa-facebook-square { color: #3b5998; }
 .fa-linkedin { color: #007bb6; }
-.fa-github { color: black}
-.fa-envelope {color: black}
+.fa-github { color: white}
+.fa-envelope {color: white}
+
+

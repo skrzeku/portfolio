@@ -1,26 +1,28 @@
 @import "../../../assets/styles/variables";
-.myind {
-  z-index: 10;
+.container-section {
+  z-index: 10 !important;
+  background-image: url("../../../assets/images/dust_scratches.png");
 }
 h4 {
-  margin-left: auto;
-  margin-right: auto;
+  @include FloatCenter;
   text-align: center;
+  font-weight: bold;
   width: 140px;
   border-bottom: $mainColor solid 5px;
 }
 .section {
+  //height on the medium screen should be bigger like 150vh or more
   height: 100vh;
-  padding-top: 50px;
+  padding: 50px 20px 20px 20px;
+  -webkit-box-shadow: inset 0 0 63px 13px rgba(255,255,255,1);
+  -moz-box-shadow: inset 0 0 63px 13px rgba(255,255,255,1);
+  box-shadow: inset 0 0 63px 13px rgba(255,255,255,1);
 }
 .skill-name {
-  padding: 15px 0 15px 40px;
+  padding: 12px 0 12px 30px;
   margin: 10px 0 0 5px;
+  text-shadow: 3px 3px 4px rgba(150, 150, 150, 1);
   border: solid $mainColor 3px;
-}
-#myEmailForm > span{
-  display: block;
-  text-align: center;
 }
 .myimages {
   width: 100px;
@@ -38,6 +40,66 @@ h4 {
 .myposright {
   right: -100px;
   opacity: 0;
+}
+
+
+
+.btn-primary {
+  border-radius: 40px;
+}
+
+
+.object{
+  @include WidthHeight(auto, 100vh);
+  background-size: cover;
+  background-attachment: fixed;
+  display: table;
+}
+.one{
+  background-image: url("../../../assets/images/7new-2.jpg");
+}
+.footer {
+  position: absolute;
+  bottom: 40px;
+  color: black;
+  opacity: 0.4;
+  z-index: 11;
+  font-family: "Magra";
+}
+.opa {
+  opacity: 0.8;
+}
+
+      //get margin left to add a graphics on the left side
+.about_up {
+  margin-top: 10%;
+  margin-left: 50%;
+  text-align: justify;
+}
+
+//medium width
+@media (max-width: $small) {
+  .section {
+    height: 135vh;
+  }
+
+          //i have to check it
+  .skill-name {
+    padding: 3px 0 3px 8px;
+  }
+}
+@media (max-width: $medium) {
+  .section {
+    height: 125vh;
+  }
+  .skill-name {
+    padding: 6px 0 6px 16px;
+  }
+}
+@media (max-width: $large) {
+  .skill-name {
+    padding: 10px 0 10px 20px;
+  }
 }
 
 

@@ -1,18 +1,39 @@
 @import "../../../assets/styles/variables";
 .smallprojects {
-  @include WidthHeight(auto, 30vh);
+  @include WidthHeight(100%, 40vh);
   opacity: 1;
-  background-color: yellow;
+  position: relative;
+  //background-image: url("../../../assets/images/site2.png");
+  background-repeat: no-repeat;
+  border: solid 3px white;
   &:hover {
     opacity: 0.8;
     border: solid $mainColor 3px;
   }
-
   &:hover .myposition {
     height: 40px;
   }
   &:hover .inside{
     opacity: 1;
+  }
+  &:hover .fa-search {
+    opacity: 1;
+  }
+}
+
+.fa-search {
+  position: absolute;
+  left: 45%;
+  top: 40%;
+  padding: 5px;
+  border: solid 3px black;
+  border-radius: 15px;
+  color: white;
+  background-color: #adb5bd;
+  opacity: 0;
+  font-size: 40px;
+  &:hover {
+    transform: scale(1.1);
   }
 }
 .myposition{
@@ -27,6 +48,11 @@
   opacity: 0.0;
   -webkit-transition: all 900ms;
   transition: all 900ms;
+}
+.addtab {
+  font-family: 'Merriweather', serif;
+  font-size: 1.2rem;
+  opacity: 0.7;
 }
 
 /*  -webkit-transform: scale(0.8);

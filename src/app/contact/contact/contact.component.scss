@@ -1,0 +1,22 @@
+@import "../../../assets/styles/variables";
+.alldiv {
+  border: solid 3px $mainColor;
+  height: 70vh;
+  position: relative;
+}
+.textaboutmail {
+  font-family: 'Cardo', serif;
+  opacity: 0.7;
+  text-align: left;
+}
+#Body {
+  height: 30vh;
+}
+.mybutton {
+  @include FloatCenter;
+  margin-top: 20px;
+  border-radius: 45px;
+}
+#subject {
+  border: solid 2px $mainColor;
+}

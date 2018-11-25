@@ -1,19 +1,36 @@
 @import "variables";
 .myfixed {
-  @include MyFixed_Top_Left_textwhite(0,0, black);
+  @include MyFixed_Top_Left_textwhite(0,0, white);
   z-index: 10;
   height: 100%;
   width: 15%;
 }
-.router {
-  margin-left: 15%;
+
+body, html {
+  overflow-x: hidden;
+  -ms-overflow-x: hidden;
+  font-family: 'Cabin', sans-serif;
 }
+.headout {
+  width: 100%;
+  color: whitesmoke;
+  height: 15vh;
+  background-size: cover;
+  background-image: url("assets/images/navbarfinal.png");
+}
+                                  //space after sidebar
+                                .router {
+                                  margin-left: 15%;
+                                }
+
 .myul {
   display: block;
 }
+
 body {
-  font-size: 1.4rem;
-  overflow-x: hidden;
+  font-size: 1.3rem;
+
+  background-color: lightsteelblue;
 }
 .nav-link {
   cursor: pointer;
@@ -28,7 +45,7 @@ body {
   font-size: 1.3rem;
 }
 .navbar-brand {
-  font-family: "Comic Sans MS";
+  font-family: 'PT Serif', serif;
   font-size: 1.5rem;
   width: 70%;
 }
@@ -36,7 +53,6 @@ body {
   @include MyFixed_Top_Left_textwhite(90vh, 0, white);
   @include WidthHeight(100%, 20vh);
   position: absolute;
-  background-color: $mainColor;
 }
 .c-pointer {
   cursor: pointer;
@@ -44,28 +60,30 @@ body {
 
 //portfolio and contact headers
 .headers {
-  border-top: darkgray inset 2px;
-  border-bottom: darkgray outset 2px;
+  @include FloatCenter;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: $mainColor solid 8px;
+  font-family: 'Chakra Petch', sans-serif;
+  width: 250px;
 }
 
 
 // Extra small devices (portrait phones, less than 576px)
 // No media query since this is the default in Bootstrap
-@media (max-width: 575px) {
-
+@media (max-width: $x-small) {
 }
 
 // Small devices (landscape phones, 576px and up)
-@media (max-width: 767px) {
+@media (max-width: $small) {
 body {
   font-size: 1.1rem;
 }
-
-
 }
 
 // Medium devices (tablets, 768px and up)
-@media (max-width: 991px) {
+@media (max-width: $medium) {
 
   .myfixed {
     position: relative;
@@ -93,7 +111,7 @@ body {
 }
 
 // Large devices (desktops, 992px and up)
-@media (max-width: 1199px) {
+@media (max-width: $large) {
   .myul > li > a{
     font-size: 1.1rem;
   }
@@ -105,7 +123,7 @@ body {
 }
 
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
+@media (min-width: $x-large) {
  }
 
 

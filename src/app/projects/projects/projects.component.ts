@@ -5,6 +5,7 @@ import {FilterComponent} from '../filter/filter.component';
 import {Router} from '@angular/router';
 import {MainService} from '../../shared-module/services/main.service';
 import {ProjectDetailsComponent} from '../project-details/project-details.component';
+import {DomSanitizer, SafeStyle} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-projects',
@@ -22,7 +23,7 @@ export class ProjectsComponent implements OnInit {
   projects: Project[] = [
     {
       id: 1,
-      img_url: 'myurl',
+      img_url: '../../../assets/images/java.png',
       language: 'Java',
       shortdescription: 'java game',
       description: 'This is one of the first projects I decided to publish. A small window game TicTacToe ' +
@@ -33,7 +34,7 @@ export class ProjectsComponent implements OnInit {
     },
     {
       id: 2,
-      img_url: 'myurl',
+      img_url: '../../../assets/images/furni.png',
       language: 'HTML',
       shortdescription: 'Furniture app',
       description: 'The Furniture App was my first JavaScript application and I decided to use the JQuery library.' +
@@ -47,7 +48,7 @@ export class ProjectsComponent implements OnInit {
     },
     {
       id: 3,
-      img_url: 'myurl',
+      img_url: '../../../assets/images/site.png',
       language: 'HTML',
       shortdescription: 'First WebSite',
       description: 'My first web page which I decided to publish on the Internet. ' +
@@ -60,7 +61,7 @@ export class ProjectsComponent implements OnInit {
     },
     {
       id: 4,
-      img_url: 'myurl',
+      img_url: '../../../assets/images/smallsho.png',
       language: 'Angular',
       shortdescription: 'Small Shop',
       description: 'In order to broaden my knowledge of JavaScript and widely understood "Front-end" I decided to ' +
@@ -75,9 +76,8 @@ export class ProjectsComponent implements OnInit {
     },
     {
       id: 5,
-      img_url: 'myurl',
+      img_url: '../../../assets/images/portfolio.png',
       language: 'Angular',
-      //language: ['Angular', 'TypeScript', 'HTML', 'CSS'],
       shortdescription: 'Current WebSite',
       description: 'it was one of my first project and my first adventure with java',
       tools: 'TypeScript, Angular v6, HTML5, SCSS, Bootstrap',
@@ -87,18 +87,21 @@ export class ProjectsComponent implements OnInit {
 
   filters: Filter[] = [];
   myRef: any;
+  public backgroundImg: SafeStyle;
 
 
 
 
   constructor(private router: Router,
               private mainservice: MainService,
-              private componentfactoryresolve: ComponentFactoryResolver) { }
+              private componentfactoryresolve: ComponentFactoryResolver,
+              private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
 
     this.filters = this.filterchild.ArrayofFilters;
     this.CheckCloseValue();
+    this.backgroundImg = this.sanitizer.bypassSecurityTrustStyle('url("../../../assets/images/site2.png")');
   }
 
 
