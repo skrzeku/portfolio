@@ -1,5 +1,6 @@
 @import "../../../assets/styles/variables";
 
+/*
 .navbar-nav > li {
   padding: 10px 3px 10px 6px;
   width: 100%;
@@ -34,5 +35,20 @@
 .fa-linkedin { color: #007bb6; }
 .fa-github { color: white}
 .fa-envelope {color: white}
-
+*/
+.navbar {
+  color: white !important;
+  z-index: 50;
+  height: 8vh;
+}
+.nav-link {
+  color: white !important;
+}
+.active {
+  border-bottom: solid $mainColor 3px;
+}
+.navbar-nav > li {
+  padding: 12px;
+  outline: 0;
+}
 

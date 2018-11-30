@@ -1,4 +1,4 @@
-<div class="navbar myshadow navbar-expand-lg d-inline-block myfixed">
+<!--<div class="navbar myshadow navbar-expand-lg d-inline-block myfixed">
   <a class="navbar-brand mt-5 mb-5 text-center">Paweł <br class="rwd-break"> Skrzeszewski
   </a>
   <img src="../../../assets/images/pawel.png" class="rounded-circle img-fluid ml-xl-3">
@@ -24,6 +24,26 @@
     <a target="_blank" rel="noopener" href="https://github.com/skrzeku"><i class="fab fa-github" mat-raised-button matTooltip="Github"></i></a>
   </div>
 </div>
+-->
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li [routerLink]="['main']" [routerLinkActive]="'active'"><i class="fas fa-home"></i>
+        <a class="nav-link d-inline ml-xl-2 ml-l-1">Home</a></li>
+      <li [routerLink]="['/projects']" [routerLinkActive]="'active'">
+        <i class="fas fa-file-code"></i><a class="nav-link d-inline ml-xl-2 ml-l-1">Projects</a>
+      </li>
+      <li [routerLink]="['/contact']" [routerLinkActive]="'active'">
+        <i class="fas fa-at"></i><a class="nav-link d-inline ml-xl-2 ml-l-1">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
 
 

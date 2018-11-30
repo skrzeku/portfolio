@@ -5,7 +5,17 @@
   @include animation('bounce 2s infinite');
 }
 .homesection {
-  @include MyFixed_Top_Left_textwhite(25vh, 20vw, white);
+  @include MyFixed_Top_Left_textwhite(25vh, 15vw, white);
+  @include animation('scales 2s infinite');
+}
+.enterbtn {
+  @include MyFixed_Top_Left_textwhite(76vh, 50vw, white);
+  background-color: $mainColor;
+
+  &:hover {
+    border: 1px solid white;
+    opacity: 0.7;
+  }
 }
 .myrelative {
   @include MyFixed_Top_Left_textwhite(67vh, 41vw, white);
@@ -19,7 +29,8 @@
   display: table;
 }
 .one{
-  background-image: url("../../../assets/images/7new.jpg");
+  //background-image: url("../../../assets/images/7new.jpg");
+  background-image: url("../../../assets/images/tlo6.jpg");
 }
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
@@ -33,6 +44,18 @@
   } }
 
 
+
+@keyframes scales {
+0% {
+  transform: scale(1)
+}
+50% {
+  transform: scale(0.3)
+}
+  100% {
+    transform: scale(1)
+  }
+}
 
 
 

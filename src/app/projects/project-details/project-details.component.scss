@@ -8,9 +8,10 @@
 
 
 .mydiv {
-  @include MyFixed_Top_Left_textwhite(0, 15%, white);
+  @include MyFixed_Top_Left_textwhite(0, 0, white);
   padding: 5%;
-  @include WidthHeight(85%, 100vh);
+  //background-color: rgba(0,0,0,0.3);
+  @include WidthHeight(100%, 100vh);
   @include animation ('showDynamicComponent 2s');
 }
 .detail-inside {
@@ -18,7 +19,8 @@
   position: relative;
   border: gray 1px solid;
   @include project_detatil_shadow;
-  background: rgba(100, 149, 237, 0.6);
+  background-color: white;
+  //background: rgba(100, 149, 237, 0.6);
 }
 
                                           //media queries
