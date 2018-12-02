@@ -1,12 +1,14 @@
 @import "../../../assets/styles/variables";
 .fas {
-  @include MyFixed_Top_Left_textwhite(70vh, 50vw, white);
-  font-size: 3rem;
+  @include MyFixed_Top_Left_textwhite(80vh, 50vw, white);
+  font-size: 2.5rem;
   @include animation('bounce 2s infinite');
+  cursor: default !important;
 }
 .homesection {
   @include MyFixed_Top_Left_textwhite(25vh, 15vw, white);
-  @include animation('scales 2s infinite');
+  @include animation('scales 3s');
+  opacity: 1;
 }
 .enterbtn {
   @include MyFixed_Top_Left_textwhite(76vh, 50vw, white);
@@ -47,10 +49,7 @@
 
 @keyframes scales {
 0% {
-  transform: scale(1)
-}
-50% {
-  transform: scale(0.3)
+  transform: scale(0)
 }
   100% {
     transform: scale(1)

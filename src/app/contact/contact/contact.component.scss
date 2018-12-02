@@ -16,7 +16,13 @@ $fs: 1.1rem;
 .mybutton {
   @include FloatCenter;
   margin-top: 20px;
+  background-color: $mainColor;
+  color: white;
   border-radius: 45px;
+}
+.r {
+  margin-top: -8vh;
+  background-image: url("../../../assets/images/tlo6.jpg");
 }
 
 #email {

@@ -1,9 +1,12 @@
 <div class="object w-100 one m-0">
-  <div class="homesection">Hello, <br />
+  <div class="hideit" #hello>
+  <div class="homesection" >Hello, <br />
     my name is <b>Paweł Skrzeszewski</b><br />
     and I am a novice <br />
     <b>front-end developer </b></div>
   <span class="myrelative">Would you like to know more about me?</span>
-  <!--<i #arrow class="fas fa-arrow-down btn mt-5" (click)="scrollTo('#fat',-20,500)" mat-raised-button matTooltip="Enter" TooltipPosition='right'></i> -->
+
   <button class="btn enterbtn" (click)="scrollTo('#fat',-20,500)">ENTER</button>
+  <i class="fas fa-arrow-down btn mt-5"></i>
+  </div>
 </div>

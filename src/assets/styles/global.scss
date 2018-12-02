@@ -15,6 +15,7 @@ body, html {
   width: 100%;
   color: whitesmoke;
   height: 15vh;
+  margin-top: 30px;
   background-size: cover;
 }
                                   //space after sidebar
@@ -62,8 +63,9 @@ body {
   @include FloatCenter;
   text-align: center;
   font-weight: bold;
+  text-shadow: 3px 3px 3px $mainColor;
   text-transform: uppercase;
-  border-bottom: $mainColor solid 8px;
+  border-left: $mainColor solid 6px;
   font-family: 'Chakra Petch', sans-serif;
   width: 250px;
 }

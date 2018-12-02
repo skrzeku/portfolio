@@ -5,6 +5,23 @@
   90% { opacity: 1;
   }
 }
+#head {
+  border-bottom: $mainColor solid 1px;
+  color: $mainColor;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px black;
+}
+.tools {
+  background-color: $mainColor;
+}
+.tools > a {
+  border-bottom: solid 1px white;
+  &:hover {
+    opacity: .7;
+    text-decoration: none;
+    border: none;
+  }
+}
 
 
 .mydiv {
@@ -18,9 +35,21 @@
   @include WidthHeight(100%, 100%);
   position: relative;
   border: gray 1px solid;
+  color: black;
   @include project_detatil_shadow;
   background-color: white;
   //background: rgba(100, 149, 237, 0.6);
+}
+.leftCont {
+  border-right: $mainColor solid 2px;
+}
+.gitlink {
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+.s {
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
 }
 
                                           //media queries

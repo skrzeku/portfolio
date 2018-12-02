@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild} from '@angular/core';
 import * as $ from 'jquery';
 import {MainService} from '../../shared-module/services/main.service';
 
@@ -9,6 +9,8 @@ import {MainService} from '../../shared-module/services/main.service';
 })
 export class MainHomeComponent implements OnInit, AfterViewInit {
   @ViewChild ('arrow') arrow: ElementRef;
+  @ViewChild ('hello') hello: ElementRef;
+  myhello: any;
 
   constructor(private mainservice: MainService,
               private renderer: Renderer2) { }
@@ -16,8 +18,11 @@ export class MainHomeComponent implements OnInit, AfterViewInit {
   ngOnInit() {
   }
   ngAfterViewInit() {
-    //to change!!
-    this.bounceArrow();
+    this.myhello = this.hello.nativeElement;
+    console.log(this.myhello.clientHeight);
+
+    //to change!! no needed
+    //this.bounceArrow();
 
   }
 
@@ -27,9 +32,34 @@ export class MainHomeComponent implements OnInit, AfterViewInit {
   }
 
   bounceArrow() {
-    let arro = this.arrow.nativeElement;
+    //let arro = this.arrow.nativeElement;
 
   }
+@HostListener('window:scroll', ['$event'])
+  Checkscroll() {
+  const Scrollpos = window.pageYOffset;
+  const hei = window.innerHeight - 200;
+  const lol = 600;
+  const opamy = (((hei - Scrollpos) / hei));
+  this.renderer.setStyle(this.myhello, 'opacity', opamy);
+}
+
+
+
+    //var scrollTop = $(this).scrollTop();
+
+/*
+    $('.header-overlay').css({
+      opacity: function() {
+        var elementHeight = $(this).height(),
+          opacity = ((1 - (elementHeight - scrollTop) / elementHeight) * 0.8) + 0.2;
+
+        return opacity;
+      }
+    });
+  });*/
+
+
 }
 
 

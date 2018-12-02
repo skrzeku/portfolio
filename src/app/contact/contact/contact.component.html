@@ -1,6 +1,6 @@
 
 
-<div class="container-fluid">
+<div class="container-fluid r">
   <div class="row">
     <div class="col-sm-12 headout p-3 mb-5">
       <h1 class="headers">Contact</h1>
@@ -19,7 +19,7 @@
             <input type="text" name="subject" id="subject" [(ngModel)]="subject" class="myinput" placeholder="Subject">
             <input type="text" name="email" id="email" [(ngModel)]="email" class="myinput" placeholder="Email">
             <textarea name="Body" id="Body" [(ngModel)]="Body" class="myinput mt-4 w-100" placeholder="Text"></textarea>
-            <button type="submit" class="btn btn-primary mybutton" (click)="SendMail(subject,Body)">Send Mail</button>
+            <button type="submit" class="btn mybutton" (click)="SendMail(subject,Body)">Send Mail</button>
           </form>
         </div>
         <div class="col-md-5 p-3 col-sm-12">
@@ -36,7 +36,7 @@
               <p>Koedijk gem.Alkmaar</p>
               <p>Netherlands</p>
               E-mail:
-              <a target="_blank" rel="noopener" href="mailto:pawelskrzeszewski92@gmail.com">pawelskrzeszewski92@gmail.com</a>
+              <a target="_top" rel="noopener" href="mailto:pawelskrzeszewski92@gmail.com">pawelskrzeszewski92@gmail.com</a>
             </div>
           </div>
         </div>
