@@ -101,7 +101,8 @@ export class ProjectsComponent implements OnInit {
 
     this.filters = this.filterchild.ArrayofFilters;
     this.CheckCloseValue();
-    this.backgroundImg = this.sanitizer.bypassSecurityTrustStyle('url("../../../assets/images/site2.png")');
+
+    //this.backgroundImg = this.sanitizer.bypassSecurityTrustStyle('url("../../../assets/images/site2.png")');
   }
 
 
@@ -115,13 +116,10 @@ export class ProjectsComponent implements OnInit {
       .resolveComponentFactory(<Type <ProjectDetailsComponent>> ProjectDetailsComponent);
     this.myRef = this.templateDetails.createComponent(myfactory);
 
-        //componentRef allow to instance, so every field of class and add referneco to every method
+        //componentRef allow to instance, so every field of class and add reference to every method
     this.myRef.instance.project = project;
     this.mainservice.ShareProject(project);
 
-    /*templateRef.instance.equalDate.subscribe((val) => {
-      this.mydynamicoutput = val;
-    }); */
   }
   destroyComponent() {
     this.myRef.destroy();

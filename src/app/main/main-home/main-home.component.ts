@@ -38,8 +38,7 @@ export class MainHomeComponent implements OnInit, AfterViewInit {
 @HostListener('window:scroll', ['$event'])
   Checkscroll() {
   const Scrollpos = window.pageYOffset;
-  const hei = window.innerHeight - 200;
-  const lol = 600;
+  const hei = window.innerHeight * 0.6;
   const opamy = (((hei - Scrollpos) / hei));
   this.renderer.setStyle(this.myhello, 'opacity', opamy);
 }

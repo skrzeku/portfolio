@@ -23,11 +23,13 @@ export class MainComponent implements OnInit, AfterViewInit {
   aboutposition: number;
   whatposition: number;
   skillsposition: number;
-  //askmeposition: number;
   i: number = 0;
-  fourstars: string = '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>';
-  threestars: string = '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>';
-  twostars: string = '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>';
+  fourstars: string = '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>' +
+    '<i class="fas fa-star"></i><i class="far fa-star"></i>';
+  threestars: string = '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>' +
+    '<i class="far fa-star"></i><i class="far fa-star"></i>';
+  twostars: string = '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>' +
+    '<i class="far fa-star"></i><i class="far fa-star"></i>';
 
   constructor(private renderer: Renderer2) { }
 
@@ -56,24 +58,24 @@ export class MainComponent implements OnInit, AfterViewInit {
   }
 
   AddClassActive (numb: number): void {
-    let siema = document.querySelectorAll('.nav-item').item(numb);
+    const siema = document.querySelectorAll('.nav-item').item(numb);
     siema.classList.add('active');
   }
   RemoveClassActive (): void {
     for (let s = 0; s < 3; s++) {
-      let siema = document.querySelectorAll('.nav-item').item(s);
+      const siema = document.querySelectorAll('.nav-item').item(s);
       siema.classList.remove('active');
     }
 
   }
 
   GetHYMLElements (): void {
-    let about = document.querySelector('.myrelative');
+    const about = document.querySelector('.myrelative');
     console.log(about);
     this.aboutposition = about.getBoundingClientRect().top;
-    let whatido = document.querySelector('#mdo');
+    const whatido = document.querySelector('#mdo');
     this.whatposition = whatido.getBoundingClientRect().top;
-    let skills = document.querySelector('#one');
+    const skills = document.querySelector('#one');
     this.skillsposition = skills.getBoundingClientRect().top;
 
     //i decided to move it to the contact module
@@ -83,7 +85,7 @@ export class MainComponent implements OnInit, AfterViewInit {
   }
 
 
-
+          //What to do when scroll
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
     const scrollPosition = window.pageYOffset;
@@ -102,7 +104,7 @@ export class MainComponent implements OnInit, AfterViewInit {
     }
   }
 
-  //@HostListener('window:scroll', ['$event2'])
+  //Call it when scroll!
   checkScrollNavi() {
     const scrollPosition = window.pageYOffset;
     if (scrollPosition < (this.myposition - 50)) {
