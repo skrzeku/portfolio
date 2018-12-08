@@ -35,7 +35,7 @@
 // Medium devices (tablets, 768px and up)
 @media (max-width: $medium) {
   .alists > a {
-    font-size: 1.2rem;
+    //font-size: 1.2rem;
   }
   .navbar-nav {
     flex-direction: row;
@@ -44,6 +44,7 @@
 
 // Large devices (desktops, 992px and up)
 @media (max-width: $large) {
+
 }
 
 // Extra large devices (large desktops, 1200px and up)

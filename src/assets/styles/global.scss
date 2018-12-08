@@ -74,17 +74,17 @@ body {
 // Extra small devices (portrait phones, less than 576px)
 // No media query since this is the default in Bootstrap
 @media (max-width: $x-small) {
+ @include bodyfs(0.9rem);
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (max-width: $small) {
-body {
-  font-size: 1.1rem;
-}
+@include bodyfs(1rem);
 }
 
 // Medium devices (tablets, 768px and up)
 @media (max-width: $medium) {
+ @include bodyfs(1.1rem);
 
   .myfixed {
     position: relative;

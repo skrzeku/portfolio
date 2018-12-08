@@ -118,20 +118,30 @@ h3 {
 
           //i have to check it
   .skill-name {
-    padding: 3px 0 3px 8px;
+    //padding: 0 0 0 4px;
   }
 }
 @media (max-width: $medium) {
   .section {
     height: 125vh;
   }
+  .left-sq {
+    height: 45vh;
+  }
+  .right-what-ido {
+    height: 45vh;
+    border-left: none;
+    padding: 10px;
+    border-top: solid 1px $mainColor;
+  }
+
   .skill-name {
-    padding: 6px 0 6px 16px;
+    padding: 0;
   }
 }
 @media (max-width: $large) {
   .skill-name {
-    padding: 10px 0 10px 20px;
+    padding: 10px 0 10px 2px;
   }
 }
 
