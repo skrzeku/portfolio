@@ -80,4 +80,9 @@
     text-align: left;
   }
 }
+@media (max-width: $medium) {
+  .fas {
+    visibility: hidden;
+  }
+}
 

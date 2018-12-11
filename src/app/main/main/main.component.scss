@@ -124,6 +124,7 @@ h3 {
 @media (max-width: $medium) {
   .section {
     height: 125vh;
+    padding: 15px;
   }
   .left-sq {
     height: 45vh;
@@ -134,9 +135,11 @@ h3 {
     padding: 10px;
     border-top: solid 1px $mainColor;
   }
-
   .skill-name {
     padding: 0;
+  }
+  .h3 {
+    padding: 3px;
   }
 }
 @media (max-width: $large) {

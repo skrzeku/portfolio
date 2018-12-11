@@ -57,6 +57,15 @@
  .mydiv {
    left: 0;
  }
+  #detail_img {
+    display: none;
+  }
+}
+@media (max-width: $medium) {
+  .mydiv {
+    overflow-y: visible;
+  }
+
 }
 
 /* Gets applied if supported only */
