@@ -74,7 +74,7 @@ body {
 // Extra small devices (portrait phones, less than 576px)
 // No media query since this is the default in Bootstrap
 @media (max-width: $x-small) {
- @include bodyfs(0.9rem);
+ @include bodyfs(0.8rem);
 }
 
 // Small devices (landscape phones, 576px and up)

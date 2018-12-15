@@ -83,7 +83,11 @@ h3 {
 
 .object{
   @include WidthHeight(auto, 100vh);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
+  background-attachment: fixed;
   background-attachment: fixed;
   display: table;
 }
@@ -109,32 +113,40 @@ h3 {
   margin-left: 50%;
   text-align: justify;
 }
+@media (max-width: $x-small) {
+
+}
 
 //medium width
 @media (max-width: $small) {
   .section {
-    height: 135vh;
+    //height: 5vh;
   }
 
           //i have to check it
   .skill-name {
     //padding: 0 0 0 4px;
   }
-}
-@media (max-width: $medium) {
   .section {
-    height: 125vh;
-    padding: 15px;
+    height: 150vh;
+    padding: 4vh;
   }
   .left-sq {
-    height: 45vh;
+    height: 76vh;
+  }
+  .whatimg {
+    height: 47vh;
   }
   .right-what-ido {
-    height: 45vh;
+    height: 100%;
     border-left: none;
     padding: 10px;
     border-top: solid 1px $mainColor;
   }
+}
+@media (max-width: $medium) {
+
+
   .skill-name {
     padding: 0;
   }

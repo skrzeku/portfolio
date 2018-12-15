@@ -27,6 +27,9 @@
 
 .object{
   @include WidthHeight(auto, 100vh);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
   padding-top: 350px;
@@ -67,13 +70,15 @@
 @media (max-width: $small) {
   .myrelative {
     left: 15vw;
-    text-align: left;
+    top: 65vh;
+    text-align: center;
   }
   .fas {
     left: 34vw;
   }
   .enterbtn {
     left: 34vw;
+    top: 76vh;
   }
   .homesection {
     left: 10vw;

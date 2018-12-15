@@ -44,6 +44,10 @@
 .nav-link {
   color: white !important;
 }
+.navbar-toggler {
+  background-color: #adb5bd;
+  color: black;
+}
 .active {
   border-bottom: solid $mainColor 3px;
 }
@@ -51,10 +55,20 @@
   padding: 12px;
   outline: 0;
 }
+#navbarTogglerDemo02 {
+
+}
 
 @media (max-width: $large) {
   .navbar-nav > li {
     padding: 1px;
+  }
+}
+@media (max-width: $medium) {
+  .navbar-nav > li {
+    background-color: #adb5bd;
+    color: black;
+    float: right;
   }
 }
 
