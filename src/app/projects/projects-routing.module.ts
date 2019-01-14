@@ -9,7 +9,7 @@ const Projects: Routes = [
     component: <any>ProjectRouterComponent,
     children: [{
     path: '',
-      component: <any>ProjectsComponent,
+      component: <any>ProjectsComponent
     },
       {
         path: ':id',

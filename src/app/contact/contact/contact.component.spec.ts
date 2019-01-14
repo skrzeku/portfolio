@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {describe, expect, it, beforeEach} from '@angular/core/testing/src/testing_internal';
 
 import { ContactComponent } from './contact.component';
 

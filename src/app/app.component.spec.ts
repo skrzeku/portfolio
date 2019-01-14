@@ -1,4 +1,5 @@
 import { TestBed, async } from '@angular/core/testing';
+import {describe, expect, it, beforeEach} from '@angular/core/testing/src/testing_internal';
 import { AppComponent } from './app.component';
 import {CoreModuleModule} from './core-module/core-module.module';
 import {RouterModule} from '@angular/router';

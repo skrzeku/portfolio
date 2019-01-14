@@ -1,16 +1,19 @@
 import {Component, OnInit} from '@angular/core';
 import { Router, Event, NavigationStart, NavigationCancel, NavigationEnd, NavigationError } from '@angular/router';
+import {SeoService} from './seo.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   Loading: boolean = false;
+  lol: boolean = false;
   title = 'Portfolio';
-  constructor (private router: Router) {
-
+  constructor (private router: Router,
+               private seoservice: SeoService) {
+seoservice.addSeoData();
   }
 
 

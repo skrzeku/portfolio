@@ -10,7 +10,7 @@ const APP_ROUTES : Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'main'},
   {path: 'main', component: <any> MainComponent, pathMatch: 'full'},
   {path: 'contact', component: <any> ContactComponent, pathMatch: 'full'},
-  {path: 'projects', loadChildren: 'src/app/projects/projects.module#ProjectsModule'},
+  {path: 'projects', loadChildren: '../app/projects/projects.module#ProjectsModule'},
 //loadChildren: 'app/shop/shop.module#ShopModule'
 
 ];

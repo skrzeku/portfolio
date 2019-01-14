@@ -5,8 +5,8 @@
     <div class="col-sm-12 headout p-3 mb-3">
       <h1 class="headers">Contact</h1>
     </div>
-    <div class="offset-sm-2 col-sm-8 p-3">
-      <div class="textaboutmail p-3">
+    <div class="offset-sm-2 col-sm-8 p-md-3 p-1">
+      <div class="textaboutmail p-md-3 p-1">
         <p>Would you like to ask me about my projects? Do u want to send me any Work offer,
           ask me about my CV?
           I’ll try my best to answer the questions.</p>
@@ -15,14 +15,14 @@
     <div class="offset-lg-2 col-lg-9 col-md-12">
       <div class="row">
         <div class="col-md-7 alldiv col-sm-12">
-          <form [formGroup]="myemail" class="form-group p-4" id="myEmailForm">
+          <form class="p-4" id="myEmailForm">
             <input type="text" name="subject" id="subject" [(ngModel)]="subject" class="myinput" placeholder="Subject">
             <input type="text" name="email" id="email" [(ngModel)]="email" class="myinput" placeholder="Email">
             <textarea name="Body" id="Body" [(ngModel)]="Body" class="myinput mt-4 w-100" placeholder="Text"></textarea>
-            <button type="submit" class="btn mybutton" (click)="SendMail(subject,Body)">Send Mail</button>
+            <button type="submit" class="btn mybutton" (click)="SendMail(subject, email, Body)"> <!--(click)="SendMail(subject,Body)" -->Send Mail</button>
           </form>
         </div>
-        <div class="col-md-5 p-3 col-sm-12">
+        <div class="col-md-5 p-md-3 p-1 col-sm-12">
           <div class="contact-media p-2">
             <div class="soc-links">
               <span class="text-white mediaspan">Social Media links:</span>

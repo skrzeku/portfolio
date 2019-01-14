@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {describe, expect, it, beforeEach} from '@angular/core/testing/src/testing_internal';
 
 import { MainNaviComponent } from './main-navi.component';
 import {RouterTestingModule} from '@angular/router/testing';
-import Spy = jasmine.Spy;
 
 describe('MainNaviComponent', () => {
   let component: MainNaviComponent;
@@ -12,7 +12,6 @@ describe('MainNaviComponent', () => {
   let div: any;
   let myposi: any;
   let nextposi: any;
-  let myspy: Spy;
 
 
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import * as emailjs from 'emailjs-com';
+
 
 @Component({
   selector: 'app-contact',
@@ -8,19 +10,32 @@ import { Component, OnInit } from '@angular/core';
 export class ContactComponent implements OnInit {
   Body: string;
   subject: string;
-  myemail: any;
   email: any;
+
+
 
 
   constructor() { }
 
   ngOnInit() {
   }
+  SendMail(subject: string, email: string, text: string):void {
 
-  SendMail(subject: string, body: string): void {
+    const templateParams = {
+      subject: subject,
+      text: text,
+      from_email: email
+    };
 
-    window.location.href = 'mailto:mail@example.org?subject=' + subject + '&body=' + body;
+    emailjs.send('skrzekugmail', 'mytemplate', templateParams, 'user_7IplmzdpkPdh019K7I4Ey')
+      .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+      }, function(error) {
+        console.log('FAILED...', error);
+      });
+     console.log('sended?');
   }
+
 
 
 }

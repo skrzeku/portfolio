@@ -1,4 +1,5 @@
 ///<reference path="../../../../node_modules/protractor/built/index.d.ts"/>
+import {describe, expect, it, beforeEach} from '@angular/core/testing/src/testing_internal';
 import {async, ComponentFixture, getTestBed, TestBed} from '@angular/core/testing';
 
 import { ProjectDetailsComponent } from './project-details.component';
@@ -86,13 +87,6 @@ describe('another test', () => {
     })
       .compileComponents();
   }));
-
-  beforeEach(() => {
-    spyOn(services , 'ShareProject');
-    fixture = TestBed.createComponent(ProjectDetailsComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
   it('should be called',  () => {
     expect(services .ShareProject).toHaveBeenCalled();
   });

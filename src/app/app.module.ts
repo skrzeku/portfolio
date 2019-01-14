@@ -18,19 +18,22 @@ import {RouterModule, RouterOutlet} from '@angular/router';
     AppComponent,
   ],
   imports: [
-    BrowserModule,
     CoreModuleModule,
     MainModule,
     AppRoutingModule,
     ContactModule,
     BrowserAnimationsModule,
     SharedModuleModule,
-    RouterModule
+    RouterModule,
+    BrowserModule.withServerTransition({appId: 'my-app'}),
 
     //lazy loading don't need to import anything! like Projects module or projects-routing module
   ],
   providers: [MyfilterPipe],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+
 })
-export class AppModule { }
+export class AppModule {
+
+}

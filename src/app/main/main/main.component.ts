@@ -18,6 +18,7 @@ export class MainComponent implements OnInit, AfterViewInit {
   @ViewChild('skillleft') skillleft: ElementRef;
   leftpos: any;
   rightpos: any;
+  cont_hide: boolean = true;
   leftandrightTop: number;
   myposition: number;
   aboutposition: number;

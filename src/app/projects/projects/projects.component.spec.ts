@@ -7,6 +7,7 @@ import {Filter} from '../models/Filter';
 import {BrowserModule} from '@angular/platform-browser';
 import {SharedModuleModule} from '../../shared-module/shared-module.module';
 import {RouterTestingModule} from '@angular/router/testing';
+import {describe, expect, it, beforeEach} from '@angular/core/testing/src/testing_internal';
 
 describe('ProjectsComponent', () => {
   let component: ProjectsComponent;

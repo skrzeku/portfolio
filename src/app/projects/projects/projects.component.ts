@@ -61,7 +61,7 @@ export class ProjectsComponent implements OnInit {
     },
     {
       id: 4,
-      img_url: '../../../assets/images/small2.png',
+      img_url: '../../../assets/images/smallsho.png',
       language: 'Angular',
       shortdescription: 'Small Shop',
       description: 'In order to broaden my knowledge of JavaScript and widely understood "Front-end" I decided to ' +
