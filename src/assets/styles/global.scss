@@ -31,7 +31,7 @@ body {
   font-size: 1.3rem;
   background-color: #040505;
 }
-h1 { font-size: 2em; }
+h1 { font-size: 1.17em; }
 h2 { font-size: 1.5em; }
 h3 { font-size: 1.17em; }
 h4 { font-size: 1.12em; }
@@ -132,6 +132,9 @@ h4 { font-size: 1em; }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: $x-large) {
+  body {
+    font-size: 1.4rem;
+  }
  }
 
 

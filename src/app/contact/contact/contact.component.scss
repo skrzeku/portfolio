@@ -13,6 +13,9 @@ $fs: 1.1rem;
 #Body {
   height: 30vh;
 }
+.sent {
+  background-color: green !important;
+}
 .mybutton {
   @include FloatCenter;
   margin-top: 20px;
@@ -23,6 +26,32 @@ $fs: 1.1rem;
 .r {
   margin-top: -8vh;
   background-image: url("../../../assets/images/tlo6.jpg");
+}
+
+@keyframes showError {
+
+0% {
+  @include translateAnimation(-40px);
+  opacity: 0;
+}
+
+90% {
+  @include translateAnimation(0);
+  opacity: 1
+}
+
+}
+
+
+.erro {
+  font-style: oblique;
+  font-size: 1rem;
+  color: white;
+  background-color: red;
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 10px;
+  @include animation ('showError 2s');
 }
 
 #email {

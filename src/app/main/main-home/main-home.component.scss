@@ -37,8 +37,12 @@
 }
 .one{
   //background-image: url("../../../assets/images/7new.jpg");
-  background-size: cover;
-  background-position: center;
+  ackground-repeat:no-repeat;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  background-position:center;
   background-image: url("../../../assets/images/slajd.jpeg");
 }
 @keyframes bounce {

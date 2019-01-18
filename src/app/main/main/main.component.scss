@@ -3,7 +3,7 @@
   z-index: 10 !important;
   background-image: url("../../../assets/images/dust_scratches.png");
 }
-h3 {
+h3, h1{
   @include FloatCenter;
   text-align: center;
   font-weight: bold;
@@ -27,6 +27,7 @@ h3 {
 }
 .right-what-ido {
   border-left: solid 1px $mainColor;
+  text-align: justify;
   height: 70vh;
 }
 .marginmin {

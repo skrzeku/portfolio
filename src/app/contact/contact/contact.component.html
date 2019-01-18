@@ -15,12 +15,19 @@
     <div class="offset-lg-2 col-lg-9 col-md-12">
       <div class="row">
         <div class="col-md-7 alldiv col-sm-12">
-          <form class="p-4" id="myEmailForm">
-            <input type="text" name="subject" id="subject" [(ngModel)]="subject" class="myinput" placeholder="Subject">
-            <input type="text" name="email" id="email" [(ngModel)]="email" class="myinput" placeholder="Email">
-            <textarea name="Body" id="Body" [(ngModel)]="Body" class="myinput mt-4 w-100" placeholder="Text"></textarea>
-            <button type="submit" class="btn mybutton" (click)="SendMail(subject, email, Body)"> <!--(click)="SendMail(subject,Body)" -->Send Mail</button>
+
+
+
+          <form [formGroup]="emailform" class="p-4" id="myEmailForm">
+            <div class="erro" *ngIf="error_bool" [ngClass]="{'sent': has_sended}">{{error_text}}</div>
+            <input formControlName="subject" type="text" id="subject" class="myinput" placeholder="Subject" [ngClass]="{'error_l' : !emailform.get('subject').valid && emailform.get('subject').dirty}">
+            <input formControlName="email" type="email" id="email" class="myinput" placeholder="Email">
+            <textarea formControlName="Body" name="Body" id="Body" class="myinput mt-4 w-100" placeholder="Text"></textarea>
+            <button type="submit" class="btn mybutton" (click)="SendMail()">Send Mail</button>
           </form>
+
+
+
         </div>
         <div class="col-md-5 p-md-3 p-1 col-sm-12">
           <div class="contact-media p-2">
