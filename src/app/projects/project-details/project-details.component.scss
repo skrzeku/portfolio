@@ -30,6 +30,13 @@
   //background-color: rgba(0,0,0,0.3);
   @include WidthHeight(100%, 100vh);
   @include animation ('showDynamicComponent 2s');
+
+  @include small {
+    left: 0;
+  }
+  @include medium {
+    overflow-y: visible;
+  }
 }
 .detail-inside {
   @include WidthHeight(100%, 100%);
@@ -51,20 +58,19 @@
   font-size: 1.1rem;
   font-family: 'Poppins', sans-serif;
 }
-
-                                          //media queries
-@media (max-width: $small) {
- .mydiv {
-   left: 0;
- }
-  #detail_img {
+#detail_img {
+  @include small {
     display: none;
   }
 }
+
+                                          //media queries
+@media (max-width: $small) {
+
+
+}
 @media (max-width: $medium) {
-  .mydiv {
-    overflow-y: visible;
-  }
+
 
 }
 

@@ -1,23 +1,28 @@
 @import "../../../assets/styles/variables";
+
+@function white($opacity) {
+  @return rgba(white, $opacity)
+}
 .smallprojects {
-  @include WidthHeight(100%, 40vh);
+  @include WidthHeight(100%, 300px);
   opacity: 1;
   position: relative;
-  //background-image: url("../../../assets/images/site2.png");
+  background-color: white;
+  background-size: cover;
   background-repeat: no-repeat;
-  border: solid 3px white;
   &:hover {
-    opacity: 1;
     border: solid $mainColor 3px;
+    @include hover-transition;
   }
   &:hover .myposition {
-    height: 40px;
+    height: 100%;
   }
   &:hover .inside{
     opacity: 1;
   }
   &:hover .fa-search {
     opacity: 1;
+    z-index: 10;
   }
 }
 .myfluid {
@@ -30,7 +35,7 @@
   left: 45%;
   top: 40%;
   padding: 5px;
-  border: solid 3px black;
+  border: solid 3px $mainColor;
   border-radius: 15px;
   color: white;
   background-color: #adb5bd;
@@ -39,32 +44,45 @@
   &:hover {
     transform: scale(1.1);
   }
+  @include x-small {
+    font-size: 25px;
+    top: 45%;
+  }
 }
+
 .myposition{
   left: 0;
   bottom: 0;
   @include WidthHeight(100%, 0);
-  background-color: $mainColor;
+  background-color: rgba(255, 255, 255, 0.8);
   -webkit-transition: all 900ms;
   transition: all 900ms;
 }
 .inside {
   opacity: 0.0;
+  padding: 50px;
+  color: $mainColor;
+  font-family: 'Bitter', serif;
+  font-size: 1.2em;
+  font-weight: bold;
   -webkit-transition: all 900ms;
   transition: all 900ms;
 }
 .addtab {
   font-family: 'Merriweather', serif;
   color: white;
-  font-size: 1.2rem;
-  opacity: 0.5;
+  font-size: 0.9em;
+  opacity: 0.6;
 }
-.r {
-  margin-top: -8vh;
+.projects-container {
+  margin-top: -70px;
+  padding-bottom: 20px;
+  //margin-bottom: -50px;
   background-image: url("../../../assets/images/tlo6.jpg");
 }
 
-/*  -webkit-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    transform: scale(0.8);} */
+
+@media (max-width: $x-small) {
+
+}
 

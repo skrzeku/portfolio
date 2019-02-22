@@ -1,13 +1,68 @@
-$mainColor: #DC143C;
-$bgcolor: #f2f2f2;
+                  //VARIABLES
+        //Colors
+      $mainColor: #DC143C;
+      $bgcolor: #f2f2f2;
 
+    //media queries
+    $x-large: 1200px;
+    $large: 1199px;
+    $medium: 991px;
+    $small: 767px;
+    $x-small: 575px;
+
+                  //bootstrap changes
+                  $c-danger: #F44E11;
+                  $c-success: #23EF37;
+                  $c-warning: #FDB82E;
+                  $base-text: #3F3A3A;
+
+
+
+                              //MIXINS
+                  //body Font size
+                  @mixin bodyfs ($fs){
+                    body {
+                      font-size: $fs;
+                    }
+                  }
+        @mixin upper {
+          text-transform: uppercase;
+        }
+
+          //media queries mixins
+        @mixin x-small {
+          @media (max-width: $x-small) {
+            @content;
+          }
+        }
+        @mixin small {
+          @media (max-width: $small) {
+            @content;
+          }
+        }
+        @mixin medium {
+          @media (max-width: $medium) {
+            @content;
+          }
+        }
+        @mixin large {
+          @media (max-width: $large) {
+            @content;
+          }
+        }
+        @mixin x-large {
+          @media (max-width: $x-large) {
+            @content;
+          }
+        }
+
+
+        //blur for safari (project-details)
 @mixin myblur($howmuch) {
-  -o-backdrop-filter: blur($howmuch);
-  -ms-backdrop-filter: blur($howmuch);
-  -moz-backdrop-filter: blur($howmuch);
   -webkit-backdrop-filter: blur($howmuch);
-  backdrop-filter: blur($howmuch);
 }
+
+      //mixin for animations (project-details)
 @mixin keyframes($animation-name) {
   @-webkit-keyframes #{$animation-name} {
     @content;
@@ -25,6 +80,8 @@ $bgcolor: #f2f2f2;
     @content;
   }
 }
+
+
 @mixin animation($str) {
   -webkit-animation: #{$str};
   -moz-animation: #{$str};
@@ -40,10 +97,20 @@ $bgcolor: #f2f2f2;
 }
 
 
+@mixin Clearfix() {
+  &::after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+}
+
+
 @mixin WidthHeight($width, $height) {
   width: $width;
   height: $height;
 }
+
 @mixin MyFixed_Top_Left_textwhite ($top, $left, $color) {
   position: fixed;
   color: $color;
@@ -51,27 +118,39 @@ $bgcolor: #f2f2f2;
   top: $top;
   left: $left;
 }
+
 @mixin FloatCenter {
   display: block;
   margin-left: auto !important;
   margin-right: auto !important;
 }
+
 @mixin project_detatil_shadow {
   -webkit-box-shadow: 0 0 137px 112px rgba(0,0,0,1);
   -moz-box-shadow: 0 0 137px 112px rgba(0,0,0,1);
   box-shadow: 0 0 137px 112px rgba(0,0,0,1);
 }
-@mixin bodyfs ($fs){
-  body {
-    font-size: $fs;
-  }
-}
+              //hover transition
+        @mixin hover-transition {
+          transition: all 0.2s ease-in-out;
+        }
 
-  //media queries
-$x-large: 1200px;
-$large: 1199px;
-$medium: 991px;
-$small: 767px;
-$x-small: 575px;
+
+        //flexboxes
+        @mixin flex-display {
+          display: flex;
+          display: -ms-flexbox;
+        }
+
+        @mixin flex-justify {
+          justify-content: space-between;
+          -ms-flex-pack: justify;
+        }
+        @mixin flex-align {
+          align-items: center;
+          -ms-flex-align: center;
+        }
+
+
 
 

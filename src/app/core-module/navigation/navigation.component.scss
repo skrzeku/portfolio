@@ -1,76 +1,52 @@
 @import "../../../assets/styles/variables";
 
-/*
-.navbar-nav > li {
-  padding: 10px 3px 10px 6px;
-  width: 100%;
-}
-.active {
-  width: 100%;
-  border-left: $mainColor solid 4px;
-  -webkit-box-shadow: 4px 4px 8px 0px rgba(255,255,255,1);
-  -moz-box-shadow: 4px 4px 8px 0px rgba(255,255,255,1);
-  box-shadow: 4px 4px 8px 0px rgba(255,255,255,1);
-}
-//To delete blue outline!
-.navbar-nav li {
-  outline: 0;
-}
-.social-media > a > i {
-  width: 25%;
-  text-align: center;
-  &:hover {
-    opacity: 0.6;
-  }
-}
-.myfixed {
-  background-image: url("../../../assets/images/7navnew.png");
-  background-size: cover;
+      //navbar
+      .my-navbar-top {
+        z-index: 50;
+        height: 70px;
+      }
+
+                //lists
+            .navbar-top-lists > li {
+              padding: 10px;
+              color: white;
+              outline: 0;
+
+              @include medium {
+                color: black;
+                padding: 5px;
+                background-color: #adb5bd;
+                border: solid 2px white;
+                margin-left: 60%;
+              }
+              @include large {
+                padding: 7px;
+              }
+            }
+i, a {
+  display: inline;
 }
 
-.myshadow {
-  box-shadow: 0 4px 4px 10px rgba(0, 0, 0, 0.2), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
-}
-.fa-facebook-square { color: #3b5998; }
-.fa-linkedin { color: #007bb6; }
-.fa-github { color: white}
-.fa-envelope {color: white}
-*/
-.navbar {
-  color: white !important;
-  z-index: 50;
-  height: 8vh;
-}
+
+
 .nav-link {
   color: white !important;
 }
 .navbar-toggler {
   background-color: #adb5bd;
-  color: black;
-}
-.active {
-  border-bottom: solid $mainColor 3px;
-}
-.navbar-nav > li {
-  padding: 12px;
-  outline: 0;
-}
-#navbarTogglerDemo02 {
-
 }
 
-@media (max-width: $large) {
-  .navbar-nav > li {
-    padding: 1px;
-  }
-}
-@media (max-width: $medium) {
-  .navbar-nav > li {
-    background-color: #adb5bd;
-    color: black;
-    float: right;
-  }
-}
+              //for active tab
+          .active {
+            border-bottom: solid $mainColor 3px;
+          }
+          .active > i, .active > a{
+            @include medium {
+              color: $mainColor !important;
+              font-weight: bold;
+            }
+          }
+
 
 
 

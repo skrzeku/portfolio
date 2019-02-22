@@ -79,8 +79,8 @@ export class ProjectsComponent implements OnInit {
       img_url: '../../../assets/images/portfolio.png',
       language: 'Angular',
       shortdescription: 'Current WebSite',
-      description: 'it was one of my first project and my first adventure with java',
-      tools: 'TypeScript, Angular v6, HTML5, SCSS, Bootstrap',
+      description: 'My 2nd Single Page Application created by using Angular. This project is still in progress.',
+      tools: 'TypeScript, Angular v6, HTML5, SCSS, Bootstrap, Node.js',
       gitUrl: 'https://github.com/skrzeku/portfolio'
     }
   ];
@@ -115,6 +115,9 @@ export class ProjectsComponent implements OnInit {
     const myfactory = this.componentfactoryresolve
       .resolveComponentFactory(<Type <ProjectDetailsComponent>> ProjectDetailsComponent);
     this.myRef = this.templateDetails.createComponent(myfactory);
+
+            //scroll by to hide menu and hover effects and .fasearch
+    window.scrollBy(0,100);
 
         //componentRef allow to instance, so every field of class and add reference to every method
     this.myRef.instance.project = project;

@@ -3,6 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {MainComponent} from './main/main/main.component';
 import {ContactComponent} from './contact/contact/contact.component';
 import {SharedModuleModule} from './shared-module/shared-module.module';
+import {PageNotFoundComponent} from './shared-module/page-not-found/page-not-found.component';
 
 
 
@@ -11,6 +12,7 @@ const APP_ROUTES : Routes = [
   {path: 'main', component: <any> MainComponent, pathMatch: 'full'},
   {path: 'contact', component: <any> ContactComponent, pathMatch: 'full'},
   {path: 'projects', loadChildren: '../app/projects/projects.module#ProjectsModule'},
+  {path: '**', component: <any> PageNotFoundComponent}
 //loadChildren: 'app/shop/shop.module#ShopModule'
 
 ];

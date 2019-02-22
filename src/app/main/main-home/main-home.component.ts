@@ -21,20 +21,12 @@ export class MainHomeComponent implements OnInit, AfterViewInit {
     this.myhello = this.hello.nativeElement;
     console.log(this.myhello.clientHeight);
 
-    //to change!! no needed
-    //this.bounceArrow();
-
   }
 
   scrollTo(par1, par2, par3): void {
     this.mainservice.ScrolltoElement(par1, par2, par3);
-    //$('html, body').animate({scrollTop: 700}, '50');
   }
 
-  bounceArrow() {
-    //let arro = this.arrow.nativeElement;
-
-  }
 @HostListener('window:scroll', ['$event'])
   Checkscroll() {
   const Scrollpos = window.pageYOffset;
@@ -43,20 +35,6 @@ export class MainHomeComponent implements OnInit, AfterViewInit {
   this.renderer.setStyle(this.myhello, 'opacity', opamy);
 }
 
-
-
-    //var scrollTop = $(this).scrollTop();
-
-/*
-    $('.header-overlay').css({
-      opacity: function() {
-        var elementHeight = $(this).height(),
-          opacity = ((1 - (elementHeight - scrollTop) / elementHeight) * 0.8) + 0.2;
-
-        return opacity;
-      }
-    });
-  });*/
 
 
 }

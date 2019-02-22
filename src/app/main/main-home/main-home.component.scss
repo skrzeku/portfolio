@@ -1,20 +1,42 @@
 @import "../../../assets/styles/variables";
+
 .fas {
   @include MyFixed_Top_Left_textwhite(80vh, 49vw, white);
   font-size: 2.5rem;
   @include animation('bounce 2s infinite');
   cursor: default !important;
+
+  @include small {
+    left: 34vw;
+  }
+  @include medium {
+    visibility: hidden;
+  }
+
 }
+
 .homesection {
   @include MyFixed_Top_Left_textwhite(25vh, 15vw, white);
   @include animation('scales 3s');
   opacity: 1;
   text-shadow: 2px 2px 2px black;
+
+  @include small {
+    left: 10vw;
+    text-align: left;
+  }
 }
+
+
 .enterbtn {
   @include MyFixed_Top_Left_textwhite(78vh, 48vw, white);
   background-color: $mainColor;
   border: 1px solid white;
+
+  @include small {
+    left: 34vw;
+    top: 76vh;
+  }
 
   &:hover {
     opacity: 0.7;
@@ -23,28 +45,15 @@
 .myrelative {
   @include MyFixed_Top_Left_textwhite(71vh, 39vw, white);
   text-shadow: 2px 2px 2px black;
+
+  @include small {
+    left: 15vw;
+    top: 65vh;
+    text-align: center;
+  }
 }
 
-.object{
-  @include WidthHeight(auto, 100vh);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-attachment: fixed;
-  padding-top: 350px;
-  display: table;
-}
-.one{
-  //background-image: url("../../../assets/images/7new.jpg");
-  ackground-repeat:no-repeat;
-  -webkit-background-size:cover;
-  -moz-background-size:cover;
-  -o-background-size:cover;
-  background-size:cover;
-  background-position:center;
-  background-image: url("../../../assets/images/slajd.jpeg");
-}
+
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
    @include translateAnimation(0);
@@ -68,30 +77,13 @@
 }
 
 
-
+          //media done -- to delete
 
 //medium width
 @media (max-width: $small) {
-  .myrelative {
-    left: 15vw;
-    top: 65vh;
-    text-align: center;
-  }
-  .fas {
-    left: 34vw;
-  }
-  .enterbtn {
-    left: 34vw;
-    top: 76vh;
-  }
-  .homesection {
-    left: 10vw;
-    text-align: left;
-  }
+
 }
 @media (max-width: $medium) {
-  .fas {
-    visibility: hidden;
-  }
+
 }
 

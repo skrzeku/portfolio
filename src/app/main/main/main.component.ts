@@ -78,11 +78,6 @@ export class MainComponent implements OnInit, AfterViewInit {
     this.whatposition = whatido.getBoundingClientRect().top;
     const skills = document.querySelector('#one');
     this.skillsposition = skills.getBoundingClientRect().top;
-
-    //i decided to move it to the contact module
-    /*
-    let askme = document.querySelector('#two');
-    this.askmeposition = askme.getBoundingClientRect().top; */
   }
 
 

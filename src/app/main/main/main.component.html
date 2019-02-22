@@ -1,76 +1,115 @@
 
-<div class="container-fluid text-justify position-relative bg-transparent">
-  <div class="row">
-    <div class="col-sm-12 p-0 sro"><app-main-home></app-main-home></div>
-    <div class="col-sm-12 p-0"><app-main-navi #naviChild></app-main-navi></div>
-    <div class="col-sm-12 p-0 container-section text-left">
-      <div #fat1 class="section" id="fat">
-        <h1>@About Me</h1>
-        <div class="row">
-          <div class="col-md-6 col-sm-12">
-            <div class="left-sq p-l-5 p-sm-1">
-              <p>I come from Poland, and i'm 26. I grew up in a small town near Olsztyn.
-                I graduated from the University of Warmia and Mazury in Olsztyn with an engineering degree in the field of management and production engineering.
-                Programming is for me more than just a way of spending my free time. I constantly want to deepen my knowledge and develop my projects.</p>
-              <p>Currently I'm living in Netherlands and looking for a job as a front-end developer and working on my next projects.</p>
+      <!-- Home section-->
+              <section class="section-home section-with-images">
+                <div class="container-fluid p-0 home-container">
+                  <app-main-home></app-main-home>
+                </div>
+              </section>
+
+                <!-- Bottom Navigation-->
+          <section class="section-navigation">
+            <app-main-navi #naviChild></app-main-navi>
+          </section>
+
+                              <!-- About me section -->
+                        <section class="section-about alt-bg section position-relative" #fat1 id="fat">
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="main-headers">
+                            <h2>@About Me</h2>
+                          </div>
+                        </div>
+                          <div class="col-12 col-md-6">
+                            <div class="about-me-content p-2 p-md-3 p-lg-4">
+                              <p>I come from Poland, and i'm 26. I grew up in a small town near Olsztyn.
+                                I graduated from the University of Warmia and Mazury in Olsztyn with an engineering degree in the field of management and production engineering.
+                              <p>Currently living in Netherlands and looking for a job as a junior front-end developer. That's why i created this Portfolio website.
+                                I'm open to all opportunities for further development and learning. I constantly want to deepen my knowledge and develop my projects.
+                                i enjoy a good cup of coffee, watching good movies & football matches. More information about myself you can read in social network sites.
+                              </p>
+                              <div class="soc-links">
+                                <a target="_blank" rel="noopener" href="https://www.facebook.com/pawelskrzeszewski92"><i class="fab fa-facebook-square"></i></a>
+                                <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/paweł-skrzeszewski-847a3413a/"><i class="fab fa-linkedin"></i></a>
+                                <a target="_blank" rel="noopener" href="https://github.com/skrzeku"><i class="fab fa-github"></i></a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-md-6">
+                            <div class="right-what-ido p-2 p-md-3 p-lg-4">
+                              <img src="../../../assets/images/studnowy.png" class="imager" alt="student img">
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </section>
+
+                          <!-- What i Do section-->
+                    <section class="what-i-do-section section section-with-images" id="mdo">
+                      <div class="container-fluid">
+                        <div class="row">
+
+                          <div class="col-12">
+                            <div class="main-headers text-white">
+                            <h2>@What i Do</h2>
+                            </div>
+                          </div>
+
+                            <div class="col-12 col-md-6">
+                              <div class="left-sq p-2 p-md-3 p-lg-4">
+                                <img src="../../../assets/images/jsnowy.png" alt="javascript img" class="imager">
+                              </div>
+
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                              <div class="right-what-ido text-white p-2 p-md-3 p-lg-4">
+                                <p>At the beginning of my adventure with programming I wanted to try everything and find a suitable programming language for myself. I did some smaller projects using Java, PHP5, C++, but JavaScript has inspired me to deepen my knowledge in this direction.</p>
+                                <p>In my projects I wanted to focus on getting to know as many secrets of programming as possible. My previous projects show how my knowledge is being expanded and what progress I have made.
+                                  Currently building user-friendly, responsive websites and Single-page applications is truly a passion of mine. During the work with my own projects i have had an the opportunity to strengthen my knowledge of front-end languages and frameworks, including JavaScripts, Typescript, Angular, Bootstrap and CSS.
+
+                                  All of my projects, which can be found in the <span class="projectspan" [routerLink]="['/projects']"><u>Projects</u></span>, were entirely invented and created by me.</p>
+                              </div>
+                              <div class="clearfix"></div>
+                            </div>
+                          </div>
+                        </div>
+                    </section>
+
+              <!-- Skills section-->
+      <section class="section-skills section alt-bg position-relative" id="one">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="main-headers">
+                <h2>@Skills</h2>
+              </div>
             </div>
-          </div>
-          <div class="col-md-6 col-sm-12 p-lg-3 p-0">
-            <div class="right-what-ido pl-3">
-              <img src="../../../assets/images/studnowy.png" class="imager" alt="student img">
+            <div class="col-12 col-sm-6 skillsleft p-2 p-md-3 p-lg-4 pb-5" #skillleft>
+              <h4 class="skill-name"><b>HTML 5</b><div class="stars" [innerHtml]="threestars"></div></h4>
+              <h4 class="skill-name"><b>CSS3/Less/SCSS</b><div class="stars" [innerHtml]="threestars"></div></h4>
+              <h4  class="skill-name"><b>Responsive Web Design</b><div class="stars" [innerHtml]="fourstars"></div></h4>
+              <h4 class="skill-name"><b>Bootstrap</b><div class="stars" [innerHtml]="fourstars"></div></h4>
+              <h4 class="skill-name"><b>TDD, Jasmine, Karma</b><div class="stars" [innerHtml]="twostars"></div></h4>
+            </div>
+            <div class="col-12 col-sm-6 skillsright p-2 p-md-3 p-lg-4 pb-5" #skillright>
+              <h4 class="skill-name "><b>JavaScript/TypeScript</b><div class="stars" [innerHtml]="fourstars"></div></h4>
+              <h4 class="skill-name "><b>jQuery, Node.js</b><div class="stars" [innerHtml]="threestars"></div></h4>
+              <h4 class="skill-name "><b>Angular 4+</b><div class="stars" [innerHtml]="fourstars"></div></h4>
+              <h4 class="skill-name "><b>Git, Webpack</b><div class="stars" [innerHtml]="threestars"></div></h4>
+              <h4 class="skill-name "><b>Search Engine Optimization</b><div class="stars" [innerHtml]="twostars"></div></h4>
             </div>
 
           </div>
         </div>
-
-
-      </div>
-      <div class="section object one text-white" id="mdo">
-        <h3>@What i Do</h3>
-        <div class="row">
-          <div class="col-md-6 col-sm-12">
-            <div class="left-sq p-5" id="whatimg">
-              <img src="../../../assets/images/jsnowy.png" alt="javascript img" class="imager">
-
-            </div>
-
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <div class="right-what-ido p-sm-3 p-1">
-              <p>At the beginning of my adventure with programming I wanted to try everything and find a suitable programming language for myself. I did some smaller projects using Java, PHP5, C++, but JavaScript has inspired me to deepen my knowledge in this direction.</p>
-              <p>In my projects I wanted to focus on getting to know as many secrets of programming as possible. My previous projects show how my knowledge is being expanded and what progress I have made.
-                Currently building user-friendly, responsive websites and Single-page applications is truly a passion of mine. During the work with my own projects i have had an the opportunity to strengthen my knowledge of front-end languages and frameworks, including JavaScripts, Typescript, Angular, Bootstrap and CSS.
-
-                All of my projects, which can be found in the <span class="projectspan" [routerLink]="['/projects']"><u>Projects</u></span>, were entirely invented and created by me.</p>
-            </div>
-
-
+      </section>
+      <section>
+        <div class="container-fluid alt-bg">
+          <div class="row">
+            <!-- Footer -->
+            <h6 class="col-12 footer-content footer text-center">Copyright © 2018 Website - Paweł Skrzeszewski all rights reserved. </h6>
           </div>
         </div>
+      </section>
 
-      </div>
-      <div class="section" id="one">
-        <h3>@Skills</h3>
-        <div class="row pt-md-5 pt-sm-1">
-      <div class="col-md-6 col-sm-12 p-md-3 p-1 myposleft" #skillleft>
-        <h4 class="skill-name"><b>HTML 5</b><div class="stars" [innerHtml]="threestars"></div></h4>
-        <h4 class="skill-name"><b>CSS3/Less/SCSS</b><div class="stars" [innerHtml]="threestars"></div></h4>
-        <h4  class="skill-name"><b>Responsive Web Design</b><div class="stars" [innerHtml]="fourstars"></div></h4>
-        <h4 class="skill-name"><b>Bootstrap</b><div class="stars" [innerHtml]="fourstars"></div></h4>
-        <h4 class="skill-name"><b>TDD, Jasmine, Karma</b><div class="stars" [innerHtml]="twostars"></div></h4>
-      </div>
-          <div class="col-md-6 col-sm-12 p-md-3 p-1 myposright" #skillright>
-              <h4 class="skill-name"><b>JavaScript/TypeScript</b><div class="stars" [innerHtml]="fourstars"></div></h4>
-              <h4 class="skill-name"><b>jQuery</b><div class="stars" [innerHtml]="threestars"></div></h4>
-              <h4 class="skill-name"><b>Angular 4+</b><div class="stars" [innerHtml]="fourstars"></div></h4>
-              <h4 class="skill-name"><b>Git, Webpack</b><div class="stars" [innerHtml]="threestars"></div></h4>
-              <h4 class="skill-name"><b>Search Engine Optimization</b><div class="stars" [innerHtml]="twostars"></div></h4>
-          </div>
-      </div>
-      </div>
-    </div>
-
-  </div>
-  <h6 class="col-sm-12 footer text-center small">Copyright © 2018 Website - Paweł Skrzeszewski all rights reserved. </h6>
-</div>
 

@@ -1,22 +1,31 @@
 @import "../../../assets/styles/variables";
 #mainnavbar {
-  @include WidthHeight(100%, 6vh);
-  z-index: 30;
-  margin-top: -6vh;
+  @include WidthHeight(100%, 50px);
+  margin-top: -50px;
+  z-index: 11 !important;
+  @include small {
+    display: none;
+  }
 }
 .alists > a {
   margin-left: 15px;
 }
 
+.navbar-nav {
+  @include medium {
+    flex-direction: row;
+  }
+}
+
                         //Added by ngClass
 .main-navbar-fixed {
   position: fixed;
-  top: 6vh;
+  top: 50px;
   background-image: url("../../../assets/images/tlo6.jpg");
   background-size: cover;
 }
 .active {
-  height: 6vh;
+  height: 50px;
   background-color: #DC143C;
 }
 
@@ -27,19 +36,13 @@
 
 // Small devices (landscape phones, 576px and up)
 @media (max-width: $small) {
-  #mainnavbar {
-    display: none;
-  }
+
 }
 
 // Medium devices (tablets, 768px and up)
 @media (max-width: $medium) {
-  .alists > a {
-    //font-size: 1.2rem;
-  }
-  .navbar-nav {
-    flex-direction: row;
-  }
+
+
 }
 
 // Large devices (desktops, 992px and up)
