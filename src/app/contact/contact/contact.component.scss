@@ -124,14 +124,48 @@ float: right;
   text-align: center;
   a {
     color: white;
-    font-size: 2.5rem;
-    margin: 15px 25px 15px;
+    //font-size: 2.5rem;
+    //margin: 15px 25px 15px;
     &:hover {
-      opacity: 0.7;
+      //opacity: 0.7;
     }
+  }
+  span {
+
+@include icon-span-round(70px);
+    border: solid 2px white;
+    margin: 5px 10px 5px;
+    position: relative;
     @include medium {
-      margin: 10px 12px 10px;
+      margin: 5px 7px 5px;
+      @include icon-span-round(50px)
     }
+    @include small {
+      margin: 5px 10px 5px;
+      @include icon-span-round(60px)
+    }
+    i {
+      position: absolute;
+      line-height: 70px;
+      font-size: 45px;
+      left: 50%;
+      transform: translateX(-50%);
+      @include medium {
+        line-height: 50px;
+        font-size: 30px;
+      }
+      @include small {
+        line-height: 60px;
+        font-size: 40px;
+      }
+    }
+    &:hover {
+      background-color: white;
+    }
+    &:hover i {
+      color: $mainColor;
+    }
+
   }
 
 }
@@ -146,4 +180,5 @@ form {
     }
   }
 }
+
 

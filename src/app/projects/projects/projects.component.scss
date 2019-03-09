@@ -14,6 +14,9 @@
     border: solid $mainColor 3px;
     @include hover-transition;
   }
+  &:focus .fa-search{
+    opacity: 0;
+  }
   &:hover .myposition {
     height: 100%;
   }
@@ -22,7 +25,7 @@
   }
   &:hover .fa-search {
     opacity: 1;
-    z-index: 10;
+    z-index: 2;
   }
 }
 .myfluid {
@@ -77,6 +80,7 @@
 .projects-container {
   margin-top: -70px;
   padding-bottom: 20px;
+  overflow-y: auto;
   //margin-bottom: -50px;
   background-image: url("../../../assets/images/tlo6.jpg");
 }

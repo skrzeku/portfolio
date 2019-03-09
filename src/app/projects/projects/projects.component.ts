@@ -6,6 +6,8 @@ import {Router} from '@angular/router';
 import {MainService} from '../../shared-module/services/main.service';
 import {ProjectDetailsComponent} from '../project-details/project-details.component';
 import {DomSanitizer, SafeStyle} from '@angular/platform-browser';
+import * as $ from 'jquery';
+import {element} from 'protractor';
 
 @Component({
   selector: 'app-projects',
@@ -117,7 +119,8 @@ export class ProjectsComponent implements OnInit {
     this.myRef = this.templateDetails.createComponent(myfactory);
 
             //scroll by to hide menu and hover effects and .fasearch
-    window.scrollBy(0,100);
+    window.scrollBy(0,70);
+
 
         //componentRef allow to instance, so every field of class and add reference to every method
     this.myRef.instance.project = project;

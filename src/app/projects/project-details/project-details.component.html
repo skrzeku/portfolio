@@ -1,11 +1,11 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-12 mydiv">
-      <div class="position-relative detail-inside p-lg-2 p-1" id="siema">
+      <div class="detail-inside container-fluid" id="siema">
         <button type="button" class="close" aria-label="Close" (click)="EmitCloseByService(true)" style="margin-bottom: 5px">
           <span aria-hidden="true">&times;</span>
         </button>
-        <div class="row">
+        <div class="row p-0 myrow">
           <div class="col-md-6 col-12 leftCont" id="detail_img">
             <img src={{project.img_url}} style="width: 100% ; height: auto">
           </div>
@@ -16,12 +16,14 @@
             </div>
 
           </div>
-          <div class="col-12 position-absolute p-md-2 p-0 tools text-center" style="bottom: 0; left: 0">
-            <span class="gitlink">Tools: </span><span class="text-white s">{{project.tools}}</span> <br />
-            <span class="gitlink">GitHub: </span> <a class="text-white s" target="_blank" rel="noopener" href={{project.gitUrl}}>{{project.shortdescription}}.git</a>
-          </div>
-        </div>
+          <div class="col-12  p-0 tools text-center">
+            <div class="tools-inside">
+              <span class="gitlink">Tools: </span><span class="text-white s">{{project.tools}}</span> <br />
+              <span class="gitlink">GitHub: </span> <a class="text-white s" target="_blank" rel="noopener" href={{project.gitUrl}}>{{project.shortdescription}}.git</a>
+            </div></div>
     </div>
+
+      </div>
     </div>
   </div>
 </div>

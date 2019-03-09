@@ -151,6 +151,15 @@
           -ms-flex-align: center;
         }
 
+                  //icons
+                  @mixin icon-span-round($dimension) {
+                    display: inline-block;
+                    border-radius: 50%;
+                    text-align: center;
+                    width: $dimension;
+                    height: $dimension;
+                  }
+
 
 
 
