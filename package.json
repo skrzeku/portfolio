@@ -34,7 +34,7 @@
     "emailjs-com": "^2.3.2",
     "fs-extra": "^7.0.1",
     "googleapis": "^27.0.0",
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.0",
     "mandrill-api": "^1.0.45",
     "nativescript-email": "^1.5.3",
     "popper": "^1.0.1",
