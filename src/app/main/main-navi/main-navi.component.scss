@@ -21,11 +21,17 @@
 .main-navbar-fixed {
   position: fixed;
   top: 50px;
-  background-image: url("../../../assets/images/tlo6.jpg");
+  background-color: transparentize(gray, 0.6);
   background-size: cover;
+  div > a {
+color: $mainColor;
+
+  }
+
 }
 .active {
   height: 50px;
+  color: white !important;
   background-color: #DC143C;
 }
 

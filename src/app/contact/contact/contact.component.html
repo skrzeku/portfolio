@@ -3,14 +3,13 @@
 <div class="container-fluid position-relative contact-container">
   <div class="row">
     <div class="col-12 headout p-3">
-      <h2 class="headers p-2">Contact</h2>
+      <h2 class="headers p-2">Kontakt</h2>
     </div>
     <div class="offset-1 col-10 p-md-3 p-1">
               <!-- Text section-->
       <div class="textaboutmail p-md-3 p-1">
-        <p>Would you like to ask me about my projects, send me a job offer?
-          I’ll try my best to answer the questions.</p>
-      <p>For contact you can use both the contact form and my email below.</p>
+        <p>Jeżeli ktoś miałby do mnie jakieś pytania to proszę o skorzystanie z poniższego formularza lub skorzystanie z bezpośredniego adresu email.</p>
+
       </div>
     </div>
 
@@ -20,10 +19,10 @@
 
           <form [formGroup]="emailform" class="p-4" id="myEmailForm">
             <div class="erro" *ngIf="error_bool" [ngClass]="{'sent': has_sended}">{{error_text}}</div>
-            <input formControlName="subject" type="text" id="subject" class="myinput" placeholder="Subject">
+            <input formControlName="subject" type="text" id="subject" class="myinput" placeholder="Temat">
             <input formControlName="email" type="email" id="email" class="myinput" placeholder="example@gmail.com">
             <textarea formControlName="Body" name="Body" id="Body" class="myinput mt-4 w-100" placeholder="Text"></textarea>
-            <button type="submit" class="btn mybutton" (click)="SendMail()">Send</button>
+            <button type="submit" class="btn mybutton" (click)="SendMail()">WYŚLIJ</button>
           </form>
         </div>
 
@@ -52,8 +51,8 @@
             </div>
             <div class="text-white about-cont p-2">
               <p>Paweł Skrzeszewski</p>
-              <p>Heiloo</p>
-              <p>Netherlands</p>
+              <p>Gdańsk</p>
+              <p>Poland</p>
               E-mail:
               <a target="_top" rel="noopener" href="mailto:pawelskrzeszewski92@gmail.com">pawelskrzeszewski92@gmail.com</a>
             </div>
@@ -64,9 +63,10 @@
 
         <div class="col-12 offset-sm-1 col-sm-10 offset-md-3 col-md-6 p-2 pb-5 pr-5 pl-5">
           <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" width="600" height="650" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJkzykSQP4xUcRhYfb_P1YQn0&key=AIzaSyBgf9ERasF9BPc2RpLqVqf8GeWXtlJ46ZI" allowfullscreen></iframe>
+            <iframe class="embed-responsive-item" width="600" height="650" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJb_rUFBxz_UYRjb63Y_H7uZs&key=AIzaSyBgf9ERasF9BPc2RpLqVqf8GeWXtlJ46ZI" allowfullscreen></iframe>
           </div></div>
     <h6 class="col-sm-12 text-white footer text-center">Copyright © 2018 Website - Paweł Skrzeszewski all rights reserved. </h6>
+
 
   </div>
 

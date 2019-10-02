@@ -3,7 +3,7 @@
 
                     <!-- header section -->
               <div class="col-12 headout p-3">
-                <h2 class="headers p-2">Projects</h2>
+                <h2 class="headers p-2">Projekty</h2>
               </div>
 
               <!--Section filter  -->
@@ -17,14 +17,13 @@
                       <!-- iteration of projects -->
                 <div class="row p-4" *ngIf="projects && projects.length > 0; else NoProjects">
                 <div class="col-11 col-md-5 smallprojects position-relative m-3" *ngFor="let project of projects | myfilter: filters" [ngStyle]="{'background-image':' url(' + project.img_url + ')'}">
-                  <i class="fas fa-search c-pointer" (click)="CreateDynamicDataComponent(project)"></i>
+                  <i class="fas fa-chevron-right c-pointer" (click)="CreateDynamicDataComponent(project)"></i>
                   <div class="myposition position-absolute"><p class="inside text-center">{{project.shortdescription}}</p></div>
                 </div>
 
                         <!-- info content -->
                   <div class="col-12">
-                    <p class="p-lg-5 p-md-3 p-1 addtab text-center pb-4">This tab will be edited with the appearance of new projects made by me.
-                      Everything in the above projects was invented and written by me.</p>
+                    <p class="p-lg-5 p-md-3 p-1 addtab text-center pb-4">Wszystkie powyższe projekty były w 100% moim pomysłem i wykonane w 100% przeze mnie (Wyjątkiem jest strona domekon.pl). </p>
                   </div>
                 </div>
                             <!-- Template for dynamic component -->

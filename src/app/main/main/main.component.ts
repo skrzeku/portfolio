@@ -67,7 +67,6 @@ export class MainComponent implements OnInit, AfterViewInit {
       const siema = document.querySelectorAll('.nav-item').item(s);
       siema.classList.remove('active');
     }
-
   }
 
   GetHYMLElements (): void {

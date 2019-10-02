@@ -1,9 +1,10 @@
 
 <nav class="navbar navbar-expand-lg text-white" id="mainnavbar" [ngClass]="{'main-navbar-fixed': fixednavbar}">
     <div class="navbar-nav alists p-0">
-      <a class="nav-item nav-link " (click)="myvoid('#fat',-20,500)">@About Me</a>
-      <a class="nav-item nav-link" (click)="myvoid('#mdo',-20,500)">@What i do</a>
-      <a class="nav-item nav-link" (click)="myvoid('#one',-20,500)">@Skills</a>
+      <a class="nav-item nav-link " (click)="myvoid('#fat',0,500)">@O Mnie</a>
+      <a class="nav-item nav-link" (click)="myvoid('#mdo',0,500)">@Co Robię</a>
+      <a class="nav-item nav-link" (click)="myvoid('#one',0,500)">@Umiejętności</a>
+      <a *ngIf="fixednavbar" class="nav-item nav-link" (click)="myvoid('#top', -20, 500)"><i class="fas fa-chevron-circle-up"></i></a>
       <!--<a class="nav-item nav-link" (click)="myvoid('#two',-20,500)">@Ask me</a> moved to contect module-->
     </div>
 </nav>

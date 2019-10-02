@@ -1,10 +1,10 @@
 
       <!-- Home section-->
-              <section class="section-home section-with-images">
-                <div class="container-fluid p-0 home-container">
+
+                <div class="section-home container-fluid p-0 home-container" #top id="top">
                   <app-main-home></app-main-home>
                 </div>
-              </section>
+
 
                 <!-- Bottom Navigation-->
           <section class="section-navigation">
@@ -17,16 +17,16 @@
                       <div class="row">
                         <div class="col-12">
                           <div class="main-headers">
-                            <h2>@About Me</h2>
+                            <h2>@O Mnie</h2>
                           </div>
                         </div>
                           <div class="col-12 col-md-6">
-                            <div class="about-me-content p-2 p-md-3 p-lg-4">
-                              <p>I come from Poland, and i'm 26. I grew up in a small town near Olsztyn.
-                                I graduated from the University of Warmia and Mazury in Olsztyn with an engineering degree in the field of management and production engineering.
-                              <p>Currently living in Netherlands and looking for a job as a junior front-end developer. That's why i created this Portfolio website.
-                                I'm open to all opportunities for further development and learning. I constantly want to deepen my knowledge and develop my projects.
-                                i enjoy a good cup of coffee, watching good movies & football matches. More information about myself you can read in social network sites.
+                            <div class="about-me-content p-1 p-md-3 p-lg-4 text-justify">
+                              <p>Pochodzę z Polski i mam 27 lat. Dorastałem w małym mieście nieopodal Olsztyna.
+                                Ukończyłem Uniwersytet Warmińsko-Mazurski z tytułem inżyniera na kierunku Zarządzanie i Inżynieria Produkcji.
+                              <p>Obecnie mieszkam w Gdańsku i rozwijam się dalej jako front-end developer w pracy z własnymi projektami.
+                              Jestem otwarty na wszelkie formy współpracy które pozwolą mi doskonalić moją wiedzę.
+                              Prywatnie jestem bardzo miłym człowiekiem, uwielbiam piłkę nożną, kolarstwo i dobrą kawę :)
                               </p>
                               <div class="soc-links">
                                 <a target="_blank" rel="noopener" href="https://www.facebook.com/pawelskrzeszewski92"><i class="fab fa-facebook-square"></i></a>
@@ -36,7 +36,7 @@
                             </div>
                           </div>
                           <div class="col-12 col-md-6">
-                            <div class="right-what-ido p-2 p-md-3 p-lg-4">
+                            <div class="right-what-ido p-2 p-md-3 p-lg-4" id="studentimg">
                               <img src="../../../assets/images/studnowy.png" class="imager" alt="student img">
                             </div>
                           </div>
@@ -45,30 +45,32 @@
                   </section>
 
                           <!-- What i Do section-->
-                    <section class="what-i-do-section section section-with-images" id="mdo">
+                    <section class="what-i-do-section section" id="mdo">
                       <div class="container-fluid">
                         <div class="row">
 
                           <div class="col-12">
                             <div class="main-headers text-white">
-                            <h2>@What i Do</h2>
+                            <h2>@Co robię</h2>
                             </div>
                           </div>
 
                             <div class="col-12 col-md-6">
-                              <div class="left-sq p-2 p-md-3 p-lg-4">
+                              <div class="left-sq p-2 p-md-3 p-lg-4" id="jsleft">
                                 <img src="../../../assets/images/jsnowy.png" alt="javascript img" class="imager">
                               </div>
-
                             </div>
 
                             <div class="col-12 col-md-6">
-                              <div class="right-what-ido text-white p-2 p-md-3 p-lg-4">
-                                <p>At the beginning of my adventure with programming I wanted to try everything and find a suitable programming language for myself. I did some smaller projects using Java, PHP5, C++, but JavaScript has inspired me to deepen my knowledge in this direction.</p>
-                                <p>In my projects I wanted to focus on getting to know as many secrets of programming as possible. My previous projects show how my knowledge is being expanded and what progress I have made.
-                                  Currently building user-friendly, responsive websites and Single-page applications is truly a passion of mine. During the work with my own projects i have had an the opportunity to strengthen my knowledge of front-end languages and frameworks, including JavaScripts, Typescript, Angular, Bootstrap and CSS.
+                              <div class="right-what-ido text-white p-1 p-md-3 p-lg-4" id="whatidopar">
+                                <p> Na początku mojej przygody z programowaniem próbowałem odnaleźć siebie w konkretnych technologiach.
+                                  Wykonałem kilka mniejszych projektów przy użyciu Java, PHP5, C++ ale to JavaScript zainspirowałą mnie do pogłębiania mojej wiedzy w tym kierunku.
+                                 </p>
+                                <p>W swoich projektach chciałem skupić się na poznaniu jak najwięszej ilości sekretów JavaScript. Moje poprzednie projekty mają na celu pokazanie w jaki sposób się rozwijam.
+                                  Obecnie moją prawdziwą pasją jest tworzenie interaktywnych i responsywnych stron internetowych oraz aplikacji typu SPA (Single Page Application).
+                                  Praca z własnymi projektami wspomaga moją kreatywność oraz pozwala na udoskonalanie wiedzy z zakresu technologii front-end włącznie z Typescript, JavaScript, Angular, Bootstrap oraz preprocesorami CSS.
 
-                                  All of my projects, which can be found in the <span class="projectspan" [routerLink]="['/projects']"><u>Projects</u></span>, were entirely invented and created by me.</p>
+                                  Wszystkie moje projekty można znaleźć w zakładce <span class="projectspan" [routerLink]="['/projects']"><u>Projekty</u></span>.</p>
                               </div>
                               <div class="clearfix"></div>
                             </div>
@@ -82,7 +84,7 @@
           <div class="row">
             <div class="col-12">
               <div class="main-headers">
-                <h2>@Skills</h2>
+                <h2>@Umiejętności</h2>
               </div>
             </div>
             <div class="col-12 col-sm-6 skillsleft p-2 p-md-3 p-lg-4 pb-5" #skillleft>
@@ -97,7 +99,7 @@
               <h4 class="skill-name "><b>jQuery, Node.js</b><div class="stars" [innerHtml]="threestars"></div></h4>
               <h4 class="skill-name "><b>Angular 4+</b><div class="stars" [innerHtml]="fourstars"></div></h4>
               <h4 class="skill-name "><b>Git, Webpack</b><div class="stars" [innerHtml]="threestars"></div></h4>
-              <h4 class="skill-name "><b>Search Engine Optimization</b><div class="stars" [innerHtml]="twostars"></div></h4>
+              <h4 class="skill-name "><b>Search Engine Optimization</b><div class="stars" [innerHtml]="fourstars"></div></h4>
             </div>
 
           </div>

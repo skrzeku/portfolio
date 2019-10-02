@@ -14,15 +14,21 @@
 
 
 
-
-
-
 .mydiv {
-  @include MyFixed_Top_Left_textwhite(0, 0, white);
+  //@include MyFixed_Top_Left_textwhite(0, 5%, white);
+  //padding: 5%;
+  //@include WidthHeight(90%, auto);
+  position: fixed;
+  top: 10px;
+  bottom: 10px;
   padding: 5%;
-  @include WidthHeight(100%, 100vh);
-  z-index: 3 !important;
+  width: 90%;
+  left: 5%;
+  z-index: 99 !important;
+  overflow-y: auto !important;
   @include animation ('showDynamicComponent 2s');
+
+
 
   @include small {
     left: 0;
@@ -33,7 +39,7 @@
 }
 
         .tools {
-          display: table;
+          //display: table; i have to check it
           height: 160px;
           width: 100%;
           //top: calc(91px);
@@ -42,7 +48,7 @@
             position: relative;
             top: 160px;
             transform: translateY(-100%);
-            height: 80px;
+            height: auto;
           }
         }
 
@@ -55,22 +61,28 @@
           }
         }
 
+        .description {
+          font-size: 1.2rem;
+          text-align: justify;
+        }
+
 
 
 .detail-inside {
-  @include WidthHeight(100%, 100%);
+  //@include WidthHeight(100%, 100%);
   position: relative;
   border: gray 1px solid;
+  width: 100%;
+  overflow-x: hidden !important;
   padding: 10px 10px 0;
   color: black;
-  overflow-y: auto;
-  overflow-x: hidden;
+
+
   @include project_detatil_shadow;
   background-color: white;
 
       @include small {
-        overflow-y: auto;
-        overflow-x: hidden;
+
       }
 }
 

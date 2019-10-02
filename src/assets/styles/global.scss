@@ -30,11 +30,10 @@ h6 { font-size: .75em; }
   cursor: pointer;
   font-size: 1.2rem;
   opacity: 1;
-  &:hover {
-    opacity: 0.6;
-    @include hover-transition;
-  }
+
 }
+
+
 
 //font awasome icons contact and main_about_me
 
@@ -127,7 +126,7 @@ h6 { font-size: .75em; }
  }
 
 
-          //helpful examples
+          //helpful examples to delete paddings
 
     .no-padding > .row > div[class*='col-'] {
       padding-left: 0;

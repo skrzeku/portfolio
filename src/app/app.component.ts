@@ -17,6 +17,14 @@ seoservice.addSeoData();
   }
 
 
+        /*CountTo jQuery Plugin by using html attributes   !!! useful
+
+  $('.timer').countTo();
+
+   */
+
+
+
         //SPINNER
   ngOnInit () {
     this.router.events.subscribe((routerEvent: Event) => {
@@ -26,7 +34,7 @@ seoservice.addSeoData();
     });
   }
 
-  private checkRouterEvent(routerEvent: Event) {
+   checkRouterEvent(routerEvent: Event) {
     if (routerEvent instanceof NavigationStart) {
       this.Loading = true;
     } else if (routerEvent instanceof NavigationEnd

@@ -1,5 +1,6 @@
 import {Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
 import {MainService} from '../../shared-module/services/main.service';
+import {element} from 'protractor';
 
 @Component({
   selector: 'app-main-navi',
@@ -20,8 +21,16 @@ export class MainNaviComponent implements OnInit {
   }
 
 
+
   myvoid(param, param2, param3): void {
     this.mainservice.ScrolltoElement(param, param2, param3);
+  }
+
+  myfunc(): void {
+    window.scrollTo({
+      top: 0,
+      behavior: 'instant'
+    });
   }
 
 

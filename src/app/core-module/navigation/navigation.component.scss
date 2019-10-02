@@ -6,22 +6,33 @@
         height: 70px;
       }
 
-                //lists
-            .navbar-top-lists > li {
-              padding: 10px;
-              color: white;
-              outline: 0;
+              .navbar-top-lists >li{
+                outline: 0;
+                margin-right: 5px;
 
-              @include medium {
-                color: black;
-                padding: 5px;
-                background-color: #adb5bd;
-                border: solid 2px white;
-                margin-left: 60%;
+                @include medium {
+                  color: black;
+                  padding: 5px;
+                  background-color: #adb5bd;
+                  border: solid 2px white;
+                  margin-left: 60%;
+                }
+                @include large {
+                  padding: 7px;
+                }
+                &:hover {
+                  border-bottom: solid 1px $mainColor;
+
+                }
+
               }
-              @include large {
-                padding: 7px;
-              }
+                //lists
+            .navbar-top-lists > li > a, i{
+              padding: 6px;
+              color: white;
+              font-size: 16px;
+
+
             }
 i, a {
   display: inline;
@@ -38,7 +49,7 @@ i, a {
 
               //for active tab
           .active {
-            border-bottom: solid $mainColor 3px;
+            border-bottom: solid $mainColor 2px;
           }
           .active > i, .active > a{
             @include medium {
